@@ -1,0 +1,16 @@
+site_name: Carbon Atlas Documentation
+site_description: Documentation for the Carbon Atlas platform
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Architecture: ARCHITECTURE.md
+  - Competitors: COMPETITORS.md
+  - Configurability: CONFIGURABILITY.md
+  - Cost: COST.md
+  - EU Biomethane: EU-BIOMETHANE.md
+  - Identity and Scope: IDENTITY-AND-SCOPE.md
+  - Integration Standards: INTEGRATION_STANDARD.md
+  - Offset: OFFSET.md
+  - Rules and Workflows: RULES-AND-WORKFLOWS.md
