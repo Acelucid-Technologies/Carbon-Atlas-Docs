@@ -1,0 +1,1510 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Carbon Atlas platform">
+      
+      
+      
+      
+        <link rel="prev" href="../COST/">
+      
+      
+        <link rel="next" href="../IDENTITY-AND-SCOPE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>EU Biomethane - Carbon Atlas Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#eu-biomethane-domain-calculations-rules-workflows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Carbon Atlas Documentation" class="md-header__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carbon Atlas Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              EU Biomethane
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Carbon Atlas Documentation" class="md-nav__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carbon Atlas Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPETITORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONFIGURABILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU Biomethane
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU Biomethane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#read-this-before-configuring-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read this before configuring anything
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-is-not-a-carbon-offset-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this is not a carbon-offset product
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-frameworks-and-what-each-demands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The frameworks, and what each demands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ghg-intensity-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The GHG intensity calculation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The GHG intensity calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-every-term-is-stored-separately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why every term is stored separately
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thresholds ⚠️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedstock-and-annex-ix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedstock and Annex IX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mass-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mass balance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double-counting-the-central-integrity-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double counting — the central integrity rule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule catalogue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow catalogue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ace-vertical-slice-b5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Ace vertical slice (B5)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data model summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions-for-r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions for R0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDENTITY-AND-SCOPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity and Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INTEGRATION_STANDARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OFFSET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES-AND-WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules and Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#read-this-before-configuring-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read this before configuring anything
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-is-not-a-carbon-offset-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this is not a carbon-offset product
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-frameworks-and-what-each-demands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The frameworks, and what each demands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ghg-intensity-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The GHG intensity calculation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The GHG intensity calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-every-term-is-stored-separately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why every term is stored separately
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thresholds ⚠️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feedstock-and-annex-ix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feedstock and Annex IX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mass-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mass balance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#double-counting-the-central-integrity-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Double counting — the central integrity rule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule catalogue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-catalogue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow catalogue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ace-vertical-slice-b5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Ace vertical slice (B5)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data model summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-questions-for-r0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open questions for R0
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="eu-biomethane-domain-calculations-rules-workflows">EU Biomethane — Domain, Calculations, Rules &amp; Workflows</h1>
+<p>The domain knowledge behind the biomethane vertical, written so that a business analyst can design
+features from it and a developer can implement rules against it.</p>
+<p>← <a href="../Deliverables/">Deliverables.md</a> · see also <a href="../RULES-AND-WORKFLOWS/">RULES-AND-WORKFLOWS.md</a> · <a href="../OFFSET/">OFFSET.md</a></p>
+<hr />
+<blockquote>
+<h2 id="read-this-before-configuring-anything">Read this before configuring anything</h2>
+<p><strong>Nothing in this document is legal advice, and no number here becomes a configured rule without
+compliance-lead sign-off.</strong> Values marked ⚠️ are the working set to be confirmed by task <code>R0</code>
+against primary sources. They are recorded here so the system can be <em>designed</em> against realistic
+shapes, not so they can be shipped unchecked.</p>
+<p>A wrong threshold configured as a rule is worse than no rule at all: it passes review because it
+looks authoritative, and it produces certificates that fail an audit months later.</p>
+</blockquote>
+<hr />
+<h2 id="why-this-is-not-a-carbon-offset-product">Why this is not a carbon-offset product</h2>
+<p>The single most consequential thing to get right, and it is a modelling decision, not a labelling
+one.</p>
+<p>Under <strong>CSRD / ESRS E1</strong>, biomethane is a <strong>low-carbon fuel</strong> that reduces <strong>gross Scope 1</strong>
+emissions. It is <strong>not</strong> a carbon offset netted against a gross figure. Removals and purchased
+credits are disclosed <em>separately</em> and never subtracted from gross emissions.</p>
+<p>The consequence for the data model:</p>
+<blockquote>
+<p><strong>Gross and market-based figures are two stored values, not one derived from the other.</strong></p>
+</blockquote>
+<p>A market-based figure computed at render time from a gross figure cannot be audited — the inputs,
+the factor versions and the methodology at the moment of calculation are gone. This is an audited
+regulatory disclosure, and "we can recompute it" is not the same as "here is what we reported and
+why". Task <code>E2</code> stores both; task <code>E4</code> snapshots the inputs.</p>
+<p>The vocabulary matters too. A screen that says "offset" where the standard says "low-carbon fuel"
+teaches a customer to describe their own disclosure incorrectly.</p>
+<hr />
+<h2 id="the-frameworks-and-what-each-demands">The frameworks, and what each demands</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Governs</th>
+<th>What the system must do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RED II / RED III</strong> (2018/2001, 2023/2413)</td>
+<td>Sustainability &amp; GHG-saving criteria for renewable fuels</td>
+<td>Track feedstock category and origin; compute GHG intensity along the chain; enforce the threshold for the installation's commissioning date and end use; hold the Proof of Sustainability evidencing it</td>
+</tr>
+<tr>
+<td><strong>Union Database (UDB)</strong></td>
+<td>Mandatory EU platform, centralised</td>
+<td>Log <strong>every transaction from raw-material origin to final supplier allocation</strong>. Anti-double-counting. This is an <em>integration</em>, not a report — batches must reconcile with UDB records or the claim is unsupported</td>
+</tr>
+<tr>
+<td><strong>Mass balance</strong></td>
+<td>How sustainable and non-sustainable volumes may mix</td>
+<td>A batch ledger balancing inputs and outputs over a defined period and site. No physical segregation assumed</td>
+</tr>
+<tr>
+<td><strong>ETS1</strong></td>
+<td>Power, industry, aviation</td>
+<td>Sustainability-compliant biomass is zero-rated for CO₂; produce the evidence that qualifies it, per installation</td>
+</tr>
+<tr>
+<td><strong>ETS2</strong></td>
+<td>Buildings, road transport, small combustion (obligations from 2027 ⚠️)</td>
+<td>Attribute volumes to the obligated party; the attribution reduces the obligation and must not also be claimed elsewhere</td>
+</tr>
+<tr>
+<td><strong>CSRD / ESRS E1</strong></td>
+<td>Corporate sustainability reporting</td>
+<td>Low-carbon fuel affecting gross Scope 1. Never netted. See above</td>
+</tr>
+<tr>
+<td><strong>GHG Protocol</strong> (revision in progress ⚠️)</td>
+<td>Corporate accounting</td>
+<td>Support market-based <strong>and</strong> location-based side by side, each with its methodology and auditor approval recorded</td>
+</tr>
+<tr>
+<td><strong>Guarantees of Origin (GO)</strong></td>
+<td>Renewable attribute certificates for gas</td>
+<td>GO and PoS are different instruments over the same molecule. Claiming both is double counting — detect and refuse</td>
+</tr>
+<tr>
+<td><strong>Voluntary schemes</strong> (ISCC EU, REDcert EU, 2BSvs…)</td>
+<td>Certification against RED criteria</td>
+<td>Scheme is per-scope configuration; certificate validity windows drive expiry alerts and block claims once lapsed</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-ghg-intensity-calculation">The GHG intensity calculation</h2>
+<p>This is the arithmetic the whole certification rests on. RED II Annex V (biofuels) and <strong>Annex VI
+(biomethane and other biomass fuels)</strong> define it as a chain of terms:</p>
+<pre><code>E = eec + el + ep + etd + eu − esca − eccs − eccr
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Typical driver for biomethane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eec</code></td>
+<td>Extraction or cultivation of raw materials</td>
+<td>Feedstock type. Wastes and residues are <strong>zero-rated</strong> here — the reason Annex IX feedstocks dominate</td>
+</tr>
+<tr>
+<td><code>el</code></td>
+<td>Annualised land-use change emissions</td>
+<td>Zero for wastes and residues</td>
+</tr>
+<tr>
+<td><code>ep</code></td>
+<td>Processing</td>
+<td>Digester parasitic load, upgrading energy (membrane vs PSA vs amine), <strong>methane slip</strong></td>
+</tr>
+<tr>
+<td><code>etd</code></td>
+<td>Transport and distribution</td>
+<td>Feedstock haulage, digestate return, grid injection or virtual pipeline trucking</td>
+</tr>
+<tr>
+<td><code>eu</code></td>
+<td>Emissions from the fuel in use</td>
+<td>Zero for biogenic CO₂</td>
+</tr>
+<tr>
+<td><code>esca</code></td>
+<td>Savings from improved agricultural management</td>
+<td>Rare; requires evidence</td>
+</tr>
+<tr>
+<td><code>eccs</code></td>
+<td>Savings from carbon capture and geological storage</td>
+<td>Where the upgrading CO₂ is captured — the CCUS overlap</td>
+</tr>
+<tr>
+<td><code>eccr</code></td>
+<td>Savings from carbon capture and replacement</td>
+<td>Where captured CO₂ substitutes fossil CO₂</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Saving relative to a fossil comparator:</strong></p>
+<pre><code>Saving % = (E_fossil − E_biomethane) / E_fossil × 100
+</code></pre>
+<p>⚠️ Working comparator values: <strong>94 gCO₂eq/MJ</strong> transport · <strong>80</strong> heating/cooling · <strong>183</strong>
+electricity.</p>
+<h3 id="why-every-term-is-stored-separately">Why every term is stored separately</h3>
+<p>An auditor does not accept "our intensity is 18 g/MJ". They ask which digester, which upgrading
+technology, what methane slip was assumed, what the haulage distance was, and where each figure came
+from. <code>B2</code> therefore stores <strong>each term with its own provenance</strong> — value, unit, source (measured /
+default / disaggregated default), the evidence reference, and who entered it.</p>
+<p>The two terms that decide most projects:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Methane slip in <code>ep</code></strong></td>
+<td>Upgrading technology and its maintenance state. A slip figure taken from a datasheet rather than measured is the most common weakness in a dossier — and the difference between passing and failing a threshold.</td>
+</tr>
+<tr>
+<td><strong>Manure credit in <code>eec</code></strong></td>
+<td>Avoided methane from manure management can produce a <em>negative</em> term, and hence a saving above 100%. Legitimate, valuable, and heavily scrutinised — the evidence requirement is proportionally higher.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="thresholds">Thresholds ⚠️</h3>
+<p>Applicable threshold depends on <strong>when the installation started operating</strong> and <strong>what the fuel is
+used for</strong>. Working set, to be confirmed by <code>R0</code>:</p>
+<table>
+<thead>
+<tr>
+<th>End use</th>
+<th>Installation start</th>
+<th>Minimum saving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transport fuel</td>
+<td>from 1 Jan 2021</td>
+<td>65%</td>
+</tr>
+<tr>
+<td>Electricity / heating / cooling</td>
+<td>2021–2025</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>Electricity / heating / cooling</td>
+<td>from 2026</td>
+<td>80%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The threshold is scope-resolved, not a constant.</strong> Two branches of the same company with digesters
+commissioned in different years face different thresholds, and a plant crossing an installation-age
+boundary faces a different one next year. Hard-coding it produces a system that certifies correctly
+this year and incorrectly the next — see rule <code>R-SUS-01</code>.</p>
+<hr />
+<h2 id="feedstock-and-annex-ix">Feedstock and Annex IX</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Treatment</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Annex IX Part A</strong></td>
+<td>Advanced; eligible for <strong>double counting</strong> toward transport targets</td>
+<td>Manure and sewage sludge, biowaste, straw, husks, cobs</td>
+</tr>
+<tr>
+<td><strong>Annex IX Part B</strong></td>
+<td>Double counting, but <strong>capped</strong> at member-state level ⚠️</td>
+<td>Used cooking oil, animal fats cat. 1 &amp; 2</td>
+</tr>
+<tr>
+<td><strong>Food/feed crops</strong></td>
+<td>Capped; land-use criteria apply</td>
+<td>Maize silage, energy crops</td>
+</tr>
+<tr>
+<td><strong>Other wastes/residues</strong></td>
+<td>Zero <code>eec</code>; not necessarily Annex IX</td>
+<td>Food processing residues</td>
+</tr>
+</tbody>
+</table>
+<p>Two rules fall directly out of this:</p>
+<ul>
+<li><strong><code>R-FEED-01</code></strong> — Part A ⇒ double-counting eligible; Part B ⇒ eligible but capped.</li>
+<li><strong><code>R-FEED-02</code></strong> — food/feed crop share above the national cap ⇒ refuse. This is the rule that
+  needs <em>nested</em> conditions over a <em>scope-resolved</em> cap, and it is the acceptance test for the
+  condition builder (<code>R3</code>).</li>
+</ul>
+<hr />
+<h2 id="mass-balance">Mass balance</h2>
+<p>Sustainability characteristics travel with volumes through a shared physical system. Within a
+defined <strong>period</strong> and <strong>site</strong>, the sum of sustainable inputs must equal the sum of sustainable
+outputs, within tolerance.</p>
+<pre><code>Σ(sustainable in)  ≈  Σ(sustainable out)  +  closing balance − opening balance
+</code></pre>
+<p>Design consequences:</p>
+<ul>
+<li><strong>The balance is a scheduled aggregate, not a per-transaction check.</strong> <code>R-MB-01</code> runs over a
+  window, which is why the rules engine must support period aggregation or delegate to a job. This
+  is the second acceptance test for <code>R1</code>/<code>R2</code>.</li>
+<li><strong>Period and site are configuration, per scope.</strong> Different schemes and member states permit
+  different balancing periods.</li>
+<li><strong>A failing balance blocks allocation, it does not reverse history.</strong> Reversing an allocation
+  already submitted to the UDB is a correction workflow (<code>W-UDB</code>), not a delete.</li>
+</ul>
+<hr />
+<h2 id="double-counting-the-central-integrity-rule">Double counting — the central integrity rule</h2>
+<p>A volume may be claimed <strong>once</strong>. The ways to claim it are:</p>
+<pre><code>UDB transaction  ·  Guarantee of Origin  ·  ETS attribution  ·  Corporate disclosure (ESRS)
+</code></pre>
+<p>Four registers, four teams, four screens — and no natural place for the check. So the platform needs
+<strong>one claim register that every downstream use consults</strong>, exactly as <code>EfQuotaGuard</code> is the single
+place quota is enforced. Anything else produces two subsystems that each believe they own the
+volume, and the disagreement is discovered by an auditor.</p>
+<p><code>R-DC-01</code> is therefore the one rule that <strong>must not be configurable off</strong>. Task <code>B3</code> builds the
+register; task <code>R3</code> asserts the UI cannot disable the rule.</p>
+<blockquote>
+<p><strong>GO and PoS are different instruments over the same molecule.</strong> Selling the Guarantee of Origin
+and separately claiming the sustainability attribute is the classic double count, and it is easy
+to do accidentally because two different departments hold the two instruments.</p>
+</blockquote>
+<hr />
+<h2 id="rule-catalogue">Rule catalogue</h2>
+<p>These are the acceptance fixtures for the condition builder (<code>R1</code>) and rule assignment (<code>R2</code>). Use
+them rather than invented examples — an engine proven against these is proven.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Rule</th>
+<th>Trigger</th>
+<th>Shape it exercises</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>R-SUS-01</code></td>
+<td>GHG saving below the threshold for the installation's start date and end use ⇒ reject</td>
+<td>Batch evidence complete</td>
+<td>Numeric comparison against a <strong>scope-resolved</strong> threshold</td>
+</tr>
+<tr>
+<td><code>R-SUS-02</code></td>
+<td>No valid PoS reference ⇒ block allocation</td>
+<td>Allocation requested</td>
+<td>Presence + validity window</td>
+</tr>
+<tr>
+<td><code>R-SUS-03</code></td>
+<td>Certifying scheme's certificate lapsed ⇒ block</td>
+<td>Allocation requested; scheduled</td>
+<td>Date window against configuration</td>
+</tr>
+<tr>
+<td><code>R-FEED-01</code></td>
+<td>Annex IX Part A ⇒ double-count eligible; Part B ⇒ eligible, capped</td>
+<td>Batch registered</td>
+<td>Category lookup driving a branch</td>
+</tr>
+<tr>
+<td><code>R-FEED-02</code></td>
+<td>Food/feed crop share above national cap ⇒ refuse</td>
+<td>Batch registered</td>
+<td><strong>Nested</strong> boolean over a scope-resolved cap</td>
+</tr>
+<tr>
+<td><code>R-MB-01</code></td>
+<td>Mass balance outside tolerance for the period and site ⇒ block further allocation</td>
+<td>Scheduled, per period</td>
+<td><strong>Aggregate over a window</strong></td>
+</tr>
+<tr>
+<td><code>R-DC-01</code></td>
+<td>Volume already claimed in UDB, as a GO, against ETS, or in a disclosure ⇒ refuse</td>
+<td>Any claim</td>
+<td>Cross-register uniqueness. <strong>Not disableable</strong></td>
+</tr>
+<tr>
+<td><code>R-ETS-01</code></td>
+<td>Zero-rate for ETS1 only when sustainability evidence is complete for the installation</td>
+<td>Reporting period close</td>
+<td>Composite AND over presence checks</td>
+</tr>
+<tr>
+<td><code>R-ETS-02</code></td>
+<td>Attribute volume to the ETS2 obligated party; refuse if attributed elsewhere</td>
+<td>Allocation</td>
+<td>Uniqueness + counterparty resolution</td>
+</tr>
+<tr>
+<td><code>R-CSRD-01</code></td>
+<td>Classify as low-carbon fuel affecting gross Scope 1 — never as an offset netted against gross</td>
+<td>Disclosure build</td>
+<td>Classification enforced at write time</td>
+</tr>
+<tr>
+<td><code>R-GHG-01</code></td>
+<td>Market-based figure without an auditor-approved methodology reference ⇒ block</td>
+<td>Disclosure build</td>
+<td>Presence gated on figure type</td>
+</tr>
+<tr>
+<td><code>R-UDB-01</code></td>
+<td>Transaction not submitted within the mandated window ⇒ escalate</td>
+<td>Scheduled</td>
+<td>Time-based escalation</td>
+</tr>
+<tr>
+<td><code>R-SLIP-01</code></td>
+<td>Methane slip above the configured ceiling for the upgrading technology ⇒ flag for review</td>
+<td>Batch evidence</td>
+<td>Threshold per equipment class</td>
+</tr>
+<tr>
+<td><code>R-DIG-01</code></td>
+<td>Digestate outlet unverified ⇒ warn (does not block)</td>
+<td>Batch registered</td>
+<td><strong>Warning, not blocker</strong> — proves the severity split</td>
+</tr>
+</tbody>
+</table>
+<p><code>R-SLIP-01</code> and <code>R-DIG-01</code> earn their place by being the two that are <em>not</em> hard blocks: one flags,
+one warns. A catalogue where everything blocks trains people to ignore everything.</p>
+<hr />
+<h2 id="workflow-catalogue">Workflow catalogue</h2>
+<p>Acceptance fixtures for the stage designer (<code>W1</code>–<code>W4</code>).</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Workflow</th>
+<th>Stages</th>
+<th>Capability it proves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>W-BATCH</code></td>
+<td>Batch sustainability approval</td>
+<td>Registered → Evidence attached → Technical review → Certifier verification → Approved / Rejected</td>
+<td>A stage owned by an <strong>external party</strong></td>
+</tr>
+<tr>
+<td><code>W-ALLOC</code></td>
+<td>Volume allocation to an off-taker</td>
+<td>Requested → Double-count check → Mass-balance check → Allocated → UDB submitted → Confirmed</td>
+<td><strong>Asynchronous failure</strong>: a stage completes, then a later external confirmation reverses it</td>
+</tr>
+<tr>
+<td><code>W-UDB</code></td>
+<td>UDB submission with correction</td>
+<td>Queued → Submitted → Accepted / Rejected → Corrected → Resubmitted</td>
+<td>Retry with correction, and a compensating path</td>
+</tr>
+<tr>
+<td><code>W-ETS</code></td>
+<td>ETS attribution and reporting</td>
+<td>Draft → Evidence complete → Internal approval → Verifier sign-off → Submitted</td>
+<td><strong>Conditional auto-approval</strong> where evidence is complete, manual otherwise</td>
+</tr>
+<tr>
+<td><code>W-CSRD</code></td>
+<td>Disclosure preparation</td>
+<td>Data collected → Gross computed → Market-based computed → Methodology attached → Auditor review → <strong>Locked</strong></td>
+<td>An <strong>immutable terminal state</strong></td>
+</tr>
+<tr>
+<td><code>W-CERT</code></td>
+<td>Certificate renewal</td>
+<td>Expiring → Renewal requested → Evidence submitted → Renewed / Lapsed</td>
+<td>A <strong>time-triggered start</strong> — no user action</td>
+</tr>
+<tr>
+<td><code>W-DIGEST</code></td>
+<td>Digestate offtake</td>
+<td>Produced → Analysed → Contracted → Dispatched → Confirmed</td>
+<td>Ordinary multi-party chain; the volume baseline</td>
+</tr>
+</tbody>
+</table>
+<p>Three capabilities a naive stage designer will not have, and which <code>W1</code>–<code>W4</code> must therefore cover:</p>
+<ol>
+<li><strong>Time-triggered start</strong> (<code>W-CERT</code>) — begins because a date arrived.</li>
+<li><strong>Asynchronous stage failure with compensation</strong> (<code>W-ALLOC</code>) — the saga case.</li>
+<li><strong>Immutable terminal state</strong> (<code>W-CSRD</code>) — locked against administrators too.</li>
+</ol>
+<hr />
+<h2 id="the-ace-vertical-slice-b5">The Ace vertical slice (<code>B5</code>)</h2>
+<p>The demo, and the proof the platform works for a real operator.</p>
+<pre><code>Tenant     ace
+Company    islabhasolutions
+Branch     spain
+Industry   biomethane
+Units      digester-1, upgrading-1, injection-point-1
+</code></pre>
+<p>Seeded with:</p>
+<ul>
+<li>A feedstock mix — manure (Annex IX A) plus food processing residues</li>
+<li>Two batches: one comfortably above threshold, one <strong>marginal</strong>, so <code>R-SUS-01</code> is visible doing
+  its job rather than passing silently</li>
+<li>A certificate approaching expiry, so <code>W-CERT</code> fires on schedule</li>
+<li>One allocation that the UDB stub rejects, so <code>W-ALLOC</code>'s compensation path runs</li>
+<li>An offset plan from <a href="../OFFSET/">OFFSET.md</a> — see the biomethane measure library</li>
+</ul>
+<hr />
+<h2 id="data-model-summary">Data model summary</h2>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Holds</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Batch</code></td>
+<td>Volume, period, site, status</td>
+<td><strong>The unit of account</strong> — not a meter reading</td>
+</tr>
+<tr>
+<td><code>Feedstock</code></td>
+<td>Category, Annex IX class, origin, quantity</td>
+<td>Drives <code>eec</code> and double counting</td>
+</tr>
+<tr>
+<td><code>GhgIntensity</code></td>
+<td>Each Annex VI term, with provenance</td>
+<td>Per term: value, unit, source, evidence, actor</td>
+</tr>
+<tr>
+<td><code>ChainOfCustody</code></td>
+<td>Mass-balance movements</td>
+<td>Input/output per period and site</td>
+</tr>
+<tr>
+<td><code>Certificate</code></td>
+<td>Scheme, number, validity window</td>
+<td>Drives <code>R-SUS-03</code> and <code>W-CERT</code></td>
+</tr>
+<tr>
+<td><code>ProofOfSustainability</code></td>
+<td>Issued PoS, linked batch and certificate</td>
+<td>The evidence artefact</td>
+</tr>
+<tr>
+<td><code>Claim</code></td>
+<td>Register, counterparty, volume, status</td>
+<td><strong>The single uniqueness point</strong> — <code>R-DC-01</code></td>
+</tr>
+<tr>
+<td><code>UdbTransaction</code></td>
+<td>Payload, submission state, retries</td>
+<td>Reconciles against <code>Claim</code></td>
+</tr>
+<tr>
+<td><code>Disclosure</code></td>
+<td>Gross and market-based figures, methodology, lock state</td>
+<td>ESRS E1 output</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="open-questions-for-r0">Open questions for <code>R0</code></h2>
+<p>Recorded rather than guessed. Each needs a primary source and compliance sign-off.</p>
+<ol>
+<li>Exact GHG-saving thresholds by installation commissioning date and end use under RED III as
+   transposed in <strong>Spain</strong> (the Ace branch's jurisdiction).</li>
+<li>The Annex IX Part B national cap applicable in Spain, and how it is measured.</li>
+<li>UDB transaction schema, required fields, and the mandated submission window.</li>
+<li>ETS2 obligated-party definition and the 2027 commencement detail.</li>
+<li>Whether the ESRS E1 datapoints require gross figures before <em>or</em> after market-based instruments
+   at each of the three scopes.</li>
+<li>Which voluntary scheme Ace certifies under — decides certificate fields and audit cadence
+   (open decision #3 in <a href="../Deliverables/#open-decisions">Deliverables.md</a>).</li>
+<li>Whether manure credits producing &gt;100% savings are accepted by the chosen scheme without
+   additional evidence.</li>
+</ol>
+<hr />
+<h2 id="sources">Sources</h2>
+<p>Primary and secondary references used to shape this document. <code>R0</code> verifies against the primary set.</p>
+<ul>
+<li>European Commission — Climate Action: <a href="https://climate.ec.europa.eu/index_en">https://climate.ec.europa.eu/index_en</a></li>
+<li>European Biogas Association — Sustainability policy: <a href="https://www.europeanbiogas.eu/policies/sustainability/">https://www.europeanbiogas.eu/policies/sustainability/</a></li>
+<li>Bioenergy Insight — biomethane in the carbon market, ETS1 &amp; ETS2:
+  <a href="https://www.bioenergy-news.com/news/biomethane-in-the-carbon-market-what-operators-need-to-know-about-ets1-and-ets2/">https://www.bioenergy-news.com/news/biomethane-in-the-carbon-market-what-operators-need-to-know-about-ets1-and-ets2/</a></li>
+<li>Bioenergy Insight — policy feed: <a href="https://www.bioenergy-news.com/news_feed/policy/">https://www.bioenergy-news.com/news_feed/policy/</a></li>
+<li>ECB environmental statement 2026: <a href="https://www.ecb.europa.eu/ecb/climate/green/html/ecb.environmentalstatement202607.en.html">https://www.ecb.europa.eu/ecb/climate/green/html/ecb.environmentalstatement202607.en.html</a></li>
+<li>Commodity Inside — carbon pricing and credit rules: <a href="https://commodityinside.com/carbon-market-weekly-regulators-corporates-and-registries-recalibrate-carbon-pricing-and-credit-rules/">https://commodityinside.com/carbon-market-weekly-regulators-corporates-and-registries-recalibrate-carbon-pricing-and-credit-rules/</a></li>
+<li>Persefoni — carbon offset programs: <a href="https://www.persefoni.com/blog/carbon-offset-programs">https://www.persefoni.com/blog/carbon-offset-programs</a></li>
+<li>Is Labha Solutions — biomethane service line: <a href="https://islabhasolutions.com/services/biomethane/">https://islabhasolutions.com/services/biomethane/</a></li>
+</ul>
+<blockquote>
+<p>Three PDFs previously in <code>EU_Biomethane/</code> (an EP research briefing <code>ECTI_BRI(2026)780417_EN</code>, an
+IFRI European biomethane sector report of June 2026, and one further paper) informed the shape of
+this document and are being removed from the repository. <code>R0</code> must re-source their content from
+the publishers rather than relying on this summary.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

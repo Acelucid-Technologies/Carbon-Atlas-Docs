@@ -1,0 +1,1119 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Carbon Atlas platform">
+      
+      
+      
+      
+        <link rel="prev" href="../IDENTITY-AND-SCOPE/">
+      
+      
+        <link rel="next" href="../OFFSET/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Integration Standards - Carbon Atlas Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#integrating-a-microservice" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Carbon Atlas Documentation" class="md-header__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carbon Atlas Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integration Standards
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Carbon Atlas Documentation" class="md-nav__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carbon Atlas Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPETITORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONFIGURABILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EU-BIOMETHANE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU Biomethane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDENTITY-AND-SCOPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity and Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Standards
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-there-is-no-gateway-name-your-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. There is no gateway. Name your service.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-paths-are-absolute-and-live-in-routests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Paths are absolute and live in routes.ts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-if-it-has-no-backend-say-so" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. If it has no backend, say so
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adapt-wire-shapes-never-cast-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Adapt wire shapes; never cast them
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cache-keys-live-in-querykeysts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cache keys live in queryKeys.ts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-staleness-comes-from-stale-by-what-the-data-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Staleness comes from STALE, by what the data is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-invalidate-what-you-affected-broadly-when-you-cannot-enumerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Invalidate what you affected — broadly when you cannot enumerate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-never-send-the-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Never send the tenant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-the-server-resolves-the-client-renders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. The server resolves; the client renders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-map-server-validation-onto-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Map server validation onto fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-token-refresh-is-the-clients-not-yours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Token refresh is the client's, not yours
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-shape-of-a-new-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The shape of a new integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The shape of a new integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OFFSET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES-AND-WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules and Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-there-is-no-gateway-name-your-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. There is no gateway. Name your service.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-paths-are-absolute-and-live-in-routests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Paths are absolute and live in routes.ts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-if-it-has-no-backend-say-so" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. If it has no backend, say so
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-adapt-wire-shapes-never-cast-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Adapt wire shapes; never cast them
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cache-keys-live-in-querykeysts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cache keys live in queryKeys.ts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-staleness-comes-from-stale-by-what-the-data-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Staleness comes from STALE, by what the data is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-invalidate-what-you-affected-broadly-when-you-cannot-enumerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Invalidate what you affected — broadly when you cannot enumerate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-never-send-the-tenant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Never send the tenant
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-the-server-resolves-the-client-renders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. The server resolves; the client renders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-map-server-validation-onto-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Map server validation onto fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-token-refresh-is-the-clients-not-yours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Token refresh is the client's, not yours
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-shape-of-a-new-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The shape of a new integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The shape of a new integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="integrating-a-microservice">Integrating a microservice</h1>
+<p>How every screen in this app talks to the backend. <strong>Follow this for new work</strong>; the UDF modules in
+<code>apps/web/src/api</code> are the worked reference.</p>
+<blockquote>
+<p>This exists because the app was once written against an API nobody had built. Of the sixteen paths
+it called, <strong>four matched a real endpoint</strong> — and nothing revealed that, because the client pointed
+at a port where nothing listens, so every call failed identically regardless of cause. The rules
+below each close one way that happened again.</p>
+</blockquote>
+<hr />
+<h2 id="1-there-is-no-gateway-name-your-service">1. There is no gateway. Name your service.</h2>
+<p>Carbon Atlas is twelve independently deployed services. Locally they are twelve ports; deployed they
+sit behind one host. <strong>A call must say which one it means.</strong></p>
+<pre><code class="language-ts">const plans = await httpRaw&lt;Plan[]&gt;('/api/v1/subscriptions/plans', { service: 'subscription' })
+</code></pre>
+<table>
+<thead>
+<tr>
+<th><code>VITE_API_BASE_URL</code></th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>empty</td>
+<td>Each service resolves to its own <code>localhost</code> port, 7001–7012</td>
+</tr>
+<tr>
+<td>set</td>
+<td>Every service resolves to that host, path-routed</td>
+</tr>
+</tbody>
+</table>
+<p>Call sites are identical in both. <strong>Never write a port</strong> into a feature module.</p>
+<h2 id="2-paths-are-absolute-and-live-in-routests">2. Paths are absolute and live in <code>routes.ts</code></h2>
+<p>Write <code>/api/v1/auth/login</code>, not <code>/auth/login</code>. The path is the real server path — paste-able into
+Swagger, greppable in the service that owns it.</p>
+<p>Every path goes in <a href="apps/web/src/api/routes.ts"><code>apps/web/src/api/routes.ts</code></a>, grouped by service.
+Paths scattered across a dozen call sites cannot be audited against a backend; collected, the file
+diffs against <code>al.master/Data/PermissionCatalogSeeder.cs</code> — the platform's own record of what exists.</p>
+<p><strong>Before adding one, check it against that seeder.</strong> A route with no rule is <em>denied</em>, so an endpoint
+the catalogue does not know returns 403 rather than 404 — a confusing way to learn you guessed.</p>
+<h2 id="3-if-it-has-no-backend-say-so">3. If it has no backend, say so</h2>
+<p>Anything the app calls that no endpoint serves goes under <code>UNIMPLEMENTED</code> in <code>routes.ts</code>, with what
+it would take. The feature can run on mock data — that is fine, and it is honest <strong>only because it is
+written down.</strong> A mock nobody recorded is indistinguishable from a working feature until a demo.</p>
+<h2 id="4-adapt-wire-shapes-never-cast-them">4. Adapt wire shapes; never cast them</h2>
+<p>Declare what the service actually returns, separately from the app's own type, and map between them
+in one function.</p>
+<pre><code class="language-ts">interface TokenResponse { accessToken: string; expiresInSeconds: number /* … */ }
+
+function toLoginResponse(tokens: TokenResponse, profile: UserProfileResponse): LoginResponse { … }
+</code></pre>
+<p>When the backend changes, exactly one place fails to compile. A cast moves that failure to runtime,
+inside a component.</p>
+<p>Expect the shapes to differ in ways that look like mistakes and are not. Login returns tokens and
+<strong>no user</strong> — issuing a token is not reading a profile, and folding the profile in would re-serialise
+it on every refresh. Signing in is therefore two calls.</p>
+<h2 id="5-cache-keys-live-in-querykeysts">5. Cache keys live in <code>queryKeys.ts</code></h2>
+<p>A key is a contract between a query and every mutation that invalidates it. Inline, that contract is
+a repeated string literal, and when the two drift the failure is not an error — it is a screen
+showing data that was correct a minute ago, which the developer never sees and the user reports as
+"it didn't save".</p>
+<p>Keys are hierarchical, broad to narrow, so a partial key invalidates everything beneath it:</p>
+<pre><code class="language-ts">udfKeys.forms()                              // every resolved form
+udfKeys.form('carbon', 'Facility', 'biomethane')   // one form, one industry
+</code></pre>
+<p><strong>Every parameter that changes the response belongs in the key.</strong> The scope one catches people:
+without <code>industryKey</code>, moving between two lines at the same branch serves the first one's fields from
+cache and renders a form the server will refuse.</p>
+<h2 id="6-staleness-comes-from-stale-by-what-the-data-is">6. Staleness comes from <code>STALE</code>, by what the data <em>is</em></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STALE.vocabulary</code></td>
+<td>Platform reference data. Changes on a release.</td>
+</tr>
+<tr>
+<td><code>STALE.configuration</code></td>
+<td>Tenant configuration. Changes when an administrator edits it, never mid-session.</td>
+</tr>
+<tr>
+<td><code>STALE.operational</code></td>
+<td>Data the user is actively working with.</td>
+</tr>
+</tbody>
+</table>
+<p>Not per screen. Two screens reading one endpoint with different staleness is a bug that presents as
+an intermittent one.</p>
+<h2 id="7-invalidate-what-you-affected-broadly-when-you-cannot-enumerate">7. Invalidate what you affected — broadly when you cannot enumerate</h2>
+<pre><code class="language-ts">onSuccess: () =&gt; {
+    queryClient.invalidateQueries({ queryKey: udfKeys.forms() })   // can't enumerate
+    queryClient.invalidateQueries({ queryKey: udfKeys.definitions() })
+}
+</code></pre>
+<p>A definition change can affect forms the mutation has no way to list — the field may be placed on
+several, at several scopes. Enumerating them would mean reconstructing the server's resolution on the
+client, which is exactly what rule 9 forbids. Drop the broad key; it costs one refetch of what is on
+screen.</p>
+<h2 id="8-never-send-the-tenant">8. Never send the tenant</h2>
+<p>Tenant, company, branch and application come from the <strong>token</strong>. The client does not send them and
+must not be trusted to: a caller able to name its own tenant can read another customer's data. That
+was a real defect in the UDF API — <code>GET /definitions/{tenantId}</code> read the tenant off the path — and
+it is why no request type in this app has a <code>tenantId</code> field.</p>
+<p>Parameters that describe <em>what is being asked for</em> rather than <em>who is asking</em> are fine.
+<code>industryKey</code> is one: a branch runs several industry lines, and which one a form belongs to is a
+property of the form, not the session.</p>
+<h2 id="9-the-server-resolves-the-client-renders">9. The server resolves; the client renders</h2>
+<p>Where the backend applies precedence — most-specific-wins across tenant, company, branch, application
+and industry — <strong>do not re-implement it.</strong> A second implementation eventually disagrees with the
+first, and the disagreement surfaces as a field that renders and then fails validation.</p>
+<p>What arrives is already resolved and already ordered. Draw it.</p>
+<h2 id="10-map-server-validation-onto-fields">10. Map server validation onto fields</h2>
+<p>The client schema saves a round trip. <strong>The server decides.</strong> For custom fields it is the only
+integrity there is — those values land in a JSON column with no foreign keys, check constraints or
+unique indexes.</p>
+<pre><code class="language-tsx">try {
+    await save(values)
+} catch (error) {
+    if (!applyServerErrors(error, setError)) throw error
+}
+</code></pre>
+<p><code>ValidationException</code> returns every failure keyed by field, and the field key is the control's
+<code>name</code>, so it is a lookup and not a translation table. Use <code>unmatchedServerErrors</code> for keys this
+bundle does not know — a form one release behind its configuration will hit that, and without
+surfacing it the message vanishes and the save button appears to do nothing.</p>
+<h2 id="11-token-refresh-is-the-clients-not-yours">11. Token refresh is the client's, not yours</h2>
+<p><code>configureApiClient</code> handles it: proactive before each request, reactive on a 401 with one replay,
+and concurrent 401s share a single in-flight refresh. <strong>Do not add retry logic to a feature module.</strong></p>
+<p>Refresh tokens are single-use and rotate, so six parallel refreshes get five <em>reuse</em> responses — and
+reuse detection correctly revokes every session the user has.</p>
+<hr />
+<h2 id="the-shape-of-a-new-integration">The shape of a new integration</h2>
+<pre><code>routes.ts          add the path, grouped by service, checked against the seeder
+queryKeys.ts       add the key hierarchy
+{feature}.api.ts   wire types, calls, adapters to app types
+use{Feature}.ts    hooks: queries with STALE, mutations with invalidation
+</code></pre>
+<h3 id="checklist">Checklist</h3>
+<ul>
+<li>[ ] Path copied from the backend, not invented, and present in the permission catalogue</li>
+<li>[ ] <code>service</code> named on every call</li>
+<li>[ ] Wire type declared separately from the app type, with one adapter between them</li>
+<li>[ ] Key in <code>queryKeys.ts</code>, including every parameter that changes the response</li>
+<li>[ ] Staleness from <code>STALE</code></li>
+<li>[ ] Mutations invalidate what they affect</li>
+<li>[ ] No <code>tenantId</code> in any request</li>
+<li>[ ] No precedence logic on the client</li>
+<li>[ ] Server validation reaches the fields</li>
+<li>[ ] Anything unbacked recorded in <code>UNIMPLEMENTED</code></li>
+</ul>
+<hr />
+<h2 id="reference">Reference</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Routing and refresh</td>
+<td><a href="packages/api-client/README.md"><code>packages/api-client/README.md</code></a></td>
+</tr>
+<tr>
+<td>This app's API layer</td>
+<td><a href="apps/web/src/api/README.md"><code>apps/web/src/api/README.md</code></a></td>
+</tr>
+<tr>
+<td>Rendering resolved fields</td>
+<td><a href="packages/react/src/forms/udf/README.md"><code>packages/react/src/forms/udf/README.md</code></a></td>
+</tr>
+<tr>
+<td>What UDF is, and why values are <code>jsonb</code></td>
+<td><code>al.net.packages/al.net.udf/README.md</code></td>
+</tr>
+<tr>
+<td>The service</td>
+<td><code>Carbon-Atlas-Services/al.udf/README.md</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

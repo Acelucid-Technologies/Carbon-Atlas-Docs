@@ -1,0 +1,1450 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Carbon Atlas platform">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../COMPETITORS/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Architecture - Carbon Atlas Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Carbon Atlas Documentation" class="md-header__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carbon Atlas Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Carbon Atlas Documentation" class="md-nav__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carbon Atlas Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shape
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-storage-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data model &amp; storage strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data model &amp; storage strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relational (PostgreSQL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-cosmos-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document (Cosmos DB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rule-for-choosing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rule for choosing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Onboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-data-collection-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Data collection &amp; upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-transformation-validation-t8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Transformation &amp; validation (T8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-emission-calculation-engine-the-critical-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Emission calculation engine — the critical component
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-offset-planning-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Offset planning engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-tenancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-tenancy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevOps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery phases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPETITORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONFIGURABILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EU-BIOMETHANE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU Biomethane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDENTITY-AND-SCOPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity and Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INTEGRATION_STANDARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OFFSET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES-AND-WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules and Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shape
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-model-storage-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data model &amp; storage strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data model &amp; storage strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relational (PostgreSQL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-cosmos-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document (Cosmos DB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-rule-for-choosing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rule for choosing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Onboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-data-collection-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Data collection &amp; upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-transformation-validation-t8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Transformation &amp; validation (T8)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-emission-calculation-engine-the-critical-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Emission calculation engine — the critical component
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-offset-planning-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Offset planning engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-tenancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-tenancy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevOps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delivery-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delivery phases
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="architecture">Architecture</h1>
+<p>The services, the data model, the isolation boundaries — and an honest account of what already
+exists versus what is still to build.</p>
+<p>← <a href="../Deliverables/">Deliverables.md</a> · see also <a href="../IDENTITY-AND-SCOPE/">IDENTITY-AND-SCOPE.md</a></p>
+<hr />
+<h2 id="shape">Shape</h2>
+<p>Three repositories, twelve services, one SDK.</p>
+<pre><code>al.net.packages        23 SDK packages, published as 0.1.0-integration.N, consumed by every service
+Carbon-Atlas-Services  12 microservices, ports 7001–7012
+Carbon-atlas-webapp    pnpm monorepo — apps/web + packages/{react,api-client}
+</code></pre>
+<p><strong>The SDK is the reason twelve services do not diverge.</strong> Scope resolution, multi-tenant filters,
+caching, quota enforcement, provider bindings and UDF all live in <code>al.net.packages</code>, so a rule about
+how tenancy works is implemented once. The recurring failure mode in a system this shape is a second
+implementation of a shared rule inside one service — which is why several documents here repeat that
+"a second implementation eventually disagrees with the first".</p>
+<hr />
+<h2 id="services">Services</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Port</th>
+<th>Owns</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>al.auth</code></td>
+<td>7001</td>
+<td>Identity, sessions, tokens, MFA, challenge/nonce</td>
+<td>✅ built</td>
+</tr>
+<tr>
+<td><code>al.master</code></td>
+<td>7002</td>
+<td>Tenants, companies, branches, industries, RBAC, provider bindings, permissions</td>
+<td>✅ built</td>
+</tr>
+<tr>
+<td><code>al.subscription</code></td>
+<td>7003</td>
+<td>Plans, subscriptions, quota, wallet, promo, invoices</td>
+<td>✅ built · payment gateway &amp; invoice generation ❌</td>
+</tr>
+<tr>
+<td><code>al.carbon</code></td>
+<td>7004</td>
+<td>Emission calculations</td>
+<td>◐ partial — engine is <code>E1</code>–<code>E4</code></td>
+</tr>
+<tr>
+<td><code>al.offset</code></td>
+<td>7005</td>
+<td>Offset planning</td>
+<td>◐ partial — engine is <code>O1</code>–<code>O3</code></td>
+</tr>
+<tr>
+<td><code>al.ingestion</code></td>
+<td>7006</td>
+<td>Bulk import, export, staging, validation</td>
+<td>✅ built</td>
+</tr>
+<tr>
+<td><code>al.storage</code></td>
+<td>7007</td>
+<td>Blob abstraction, presigned URLs</td>
+<td>✅ built</td>
+</tr>
+<tr>
+<td><code>al.notification</code></td>
+<td>7008</td>
+<td>Multi-channel dispatch via provider bindings</td>
+<td>✅ built</td>
+</tr>
+<tr>
+<td><code>al.rules</code></td>
+<td>7009</td>
+<td>Rule evaluation</td>
+<td>✅ engine · authoring UI is <code>R1</code>–<code>R4</code></td>
+</tr>
+<tr>
+<td><code>al.workflow</code></td>
+<td>7010</td>
+<td>Stage execution, approvals, saga</td>
+<td>✅ engine · designer is <code>W1</code>–<code>W4</code></td>
+</tr>
+<tr>
+<td><code>al.telemetry</code></td>
+<td>7011</td>
+<td>Traces, metrics, diagnostics intake</td>
+<td>✅ built</td>
+</tr>
+<tr>
+<td><code>al.udf</code></td>
+<td>7012</td>
+<td>Form metadata, sections, conditions, i18n, static-field catalogue</td>
+<td>✅ built</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read this table before starting any task.</strong> The most expensive mistake available in this codebase
+is rebuilding something that already works — the rules and workflow engines in particular exist and
+are tested; what is missing is the authoring surface.</p>
+<hr />
+<h2 id="data-model-storage-strategy">Data model &amp; storage strategy</h2>
+<p>Two stores, chosen per data shape rather than per service.</p>
+<h3 id="relational-postgresql">Relational (PostgreSQL)</h3>
+<p><strong>For:</strong> anything needing ACID guarantees, joins, referential integrity or an audit trail.</p>
+<p>Tenants and their hierarchy · companies, branches, industries, units · grants and roles ·
+subscriptions, quota, wallets, invoices · emission calculations and audit snapshots · offset plans ·
+import jobs and staged rows · compliance records.</p>
+<p>Isolation is <code>MultiTenantDbContext</code> global query filters keyed on the active context, with
+<code>ScopeFilterOverride.SuppressTenantIsolation(reason)</code> as the deliberate, reasoned escape hatch — a
+named method rather than a flag, so bypassing isolation appears in code review as a sentence
+explaining itself.</p>
+<h3 id="document-cosmos-db">Document (Cosmos DB)</h3>
+<p><strong>For:</strong> flexible schemas, high-read reference data, per-tenant configuration.</p>
+<p>UDF definitions, view configurations, sections, static-field catalogue · emission factor database ·
+activity data with variable schemas · calculation metadata.</p>
+<p>Isolation is the <strong>partition key</strong>, and in a document store the partition key <em>is</em> the isolation
+boundary. That is why no API accepts a partition or tenant from a caller — a caller-supplied
+partition is a caller-supplied tenant. This API shipped once with that defect and had it removed.</p>
+<h3 id="the-rule-for-choosing">The rule for choosing</h3>
+<blockquote>
+<p>If losing it or getting it slightly wrong would be a financial, legal or audit problem — relational.
+If its shape varies per tenant and it is read far more than written — document.</p>
+</blockquote>
+<p>An emission <em>factor</em> is document (varies, read constantly). An emission <em>calculation</em> is relational
+(audited, must reconcile). Both are used in the same request.</p>
+<hr />
+<h2 id="core-components">Core components</h2>
+<h3 id="41-onboarding">4.1 Onboarding</h3>
+<p>Multi-step wizard: tenant → company → branch → industry → unit, plus users and their grants.</p>
+<p><strong>UDF-driven, not hand-coded</strong> — <em>target state for <code>T3</code>, not what exists today.</em> The form will come
+from <code>GET /udf/forms/master/Company</code>, so the resource's own columns and the tenant's custom fields
+render together, in the order somebody arranged them, in the requested language. Selecting an industry
+reveals industry-specific fields through server-side conditions.</p>
+<p>The backend half is done and verified end to end: <code>company_catalog</code> and <code>branch_catalog</code> carry a
+<code>custom_fields</code> jsonb column with a GIN index, onboarding validates submitted values against the
+definitions in force before writing, and a save interceptor refuses anything unvalidated.</p>
+<p>What is still missing is the <strong>screen</strong>. <code>CompanyOnboardingPage.tsx</code> hand-codes the form from
+<code>@/mocks/mockForms</code> and a local Zod schema, and no React screen consumes a resolved form. That is the
+shortcut this section warns about, already taken — it stays flagged until <code>T3</code> closes it.</p>
+<p>Hand-coding the static half defeats the static-field catalogue entirely — and it is the tempting
+shortcut, because the first version is quicker. See
+<a href="../CONFIGURABILITY/">CONFIGURABILITY.md</a> for which fields belong in the catalogue in the first place.</p>
+<h3 id="42-data-collection-upload">4.2 Data collection &amp; upload</h3>
+<p>Manual entry for Scope 1/2/3 activity data (<code>T7</code>); CSV and Excel upload with presigned direct-to-blob
+transfer; staged rows reviewed and corrected before commit. All built — see <code>al.ingestion</code> and the
+bulk grid.</p>
+<p>Cloud events trigger asynchronous parsing; nothing reaches a real record until commit.</p>
+<h3 id="43-transformation-validation-t8">4.3 Transformation &amp; validation (<code>T8</code>)</h3>
+<p>Five layers, each with its own error surface so a user is told which one rejected them:</p>
+<pre><code>1  Format        file type, encoding, size
+2  Schema        required columns present
+3  Type          numerics parse, dates valid
+4  Business      values within configured ranges     ← delegates to al.rules
+5  Completeness  critical fields populated
+</code></pre>
+<p><strong>Layer 4 delegates to the rules engine.</strong> Building a second rule evaluator inside ingestion is how
+an import accepts a row the API would reject — the two disagree, and the disagreement is discovered
+after the data is in.</p>
+<h3 id="44-emission-calculation-engine-the-critical-component">4.4 Emission calculation engine — the critical component</h3>
+<p>Hybrid by design:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Factors</strong></td>
+<td>Third-party API (Climatiq / Carbon Interface) for verified global factors, <strong>behind an interface</strong></td>
+</tr>
+<tr>
+<td><strong>Cache</strong></td>
+<td>Local document-store cache — offline capability and a 15× cost reduction (<a href="../COST/">COST.md</a>)</td>
+</tr>
+<tr>
+<td><strong>Logic</strong></td>
+<td>Custom .NET, with industry-specific methodology per vertical</td>
+</tr>
+<tr>
+<td><strong>Templates</strong></td>
+<td>Pre-configured per sector</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Activity data → factor lookup (geography, sector, period)
+              → Scope 1 (fuel, process, fugitive)
+              → Scope 2 (location-based AND market-based, stored separately)
+              → Scope 3 (15 GHG Protocol categories)
+              → industry-specific adjustment
+              → confidence score
+              → immutable audit snapshot
+</code></pre>
+<p>Two non-negotiables:</p>
+<p><strong>Location-based and market-based are two stored figures</strong> (<code>E2</code>), never one derived from the other.
+Both are reported; deriving one at render time makes it unauditable.</p>
+<p><strong>Every calculation snapshots its inputs</strong> (<code>E4</code>) — activity values, factor identities and versions,
+methodology, actor, timestamp. A figure that cannot be reproduced cannot be defended, and factors
+get revised.</p>
+<h3 id="45-offset-planning-engine">4.5 Offset planning engine</h3>
+<p>Specified in <strong><a href="../OFFSET/">OFFSET.md</a></strong>. Rule-based prioritisation by
+<code>(abatement × ROI) / complexity</code>, grouped into quick wins, medium and long term, with per-site
+assessment because a measure's value is a property of <em>(measure × location)</em>.</p>
+<hr />
+<h2 id="multi-tenancy">Multi-tenancy</h2>
+<p>Fully specified in <strong><a href="../IDENTITY-AND-SCOPE/">IDENTITY-AND-SCOPE.md</a></strong>. In summary:</p>
+<pre><code>PLATFORM → TENANT → COMPANY → BRANCH → INDUSTRY → UNIT
+                              ×
+                   APPLICATION (web | mobile | api)
+</code></pre>
+<p>Application is <strong>orthogonal</strong>, not a level — it breaks ties at the same organisational level rather
+than sitting inside the hierarchy.</p>
+<p>Tenants nest one level: parent, sub-tenant, standalone. A parent admin reads aggregated sub-tenant
+data; a sub-tenant sees neither the parent nor its siblings. <strong>All three directions need testing, and
+the sibling direction is the one that ships broken.</strong></p>
+<hr />
+<h2 id="security">Security</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>ECDSA-signed JWT, refresh rotation, challenge/nonce before password login, OIDC ready</td>
+</tr>
+<tr>
+<td><strong>MFA</strong></td>
+<td>Mandatory for admin roles (<code>A16</code>), optional otherwise</td>
+</tr>
+<tr>
+<td><strong>Authorization</strong></td>
+<td>Database-driven route permissions — policy changes without a deployment</td>
+</tr>
+<tr>
+<td><strong>Encryption at rest</strong></td>
+<td>Database TDE, document-store encryption, blob encryption; <code>[Encrypted]</code> on PII columns</td>
+</tr>
+<tr>
+<td><strong>In transit</strong></td>
+<td>TLS 1.2+ everywhere</td>
+</tr>
+<tr>
+<td><strong>Secrets</strong></td>
+<td><code>@secret:</code> references resolved at startup. No committed credentials; never rendered back to a UI</td>
+</tr>
+<tr>
+<td><strong>Isolation</strong></td>
+<td>Global query filters (relational) + partition key (document)</td>
+</tr>
+<tr>
+<td><strong>Audit</strong></td>
+<td>Immutable log, 7-year retention, correlation id on every request</td>
+</tr>
+<tr>
+<td><strong>GDPR</strong></td>
+<td>EU residency option, right-to-erasure workflow, PII redaction in diagnostics (<code>F3</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The diagnostic-report feature is a security surface.</strong> It ships browser state to the server, so
+redaction is recursive and tested — a diagnostic carrying a token or an email is a breach, not a
+feature.</p>
+<hr />
+<h2 id="frontend">Frontend</h2>
+<pre><code>apps/web              React 19, Vite, TanStack Query, react-hook-form, Zod
+packages/react        shared components — forms, datagrid, bulk grid, UDF adapters
+packages/api-client   HTTP client, service resolution, reactive 401 refresh
+</code></pre>
+<p>Three rules that keep it coherent:</p>
+<ol>
+<li><strong>The server resolves; the client renders.</strong> No precedence logic in the browser.</li>
+<li><strong>Every response-changing parameter is in the query key</strong> — scope and culture included.</li>
+<li><strong>Never send tenant, company, branch or application.</strong> They come from the token.</li>
+</ol>
+<hr />
+<h2 id="devops">DevOps</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Branching</strong></td>
+<td><code>main</code> → <code>stage</code> → <code>integration</code>, SDK published per branch as <code>0.1.0-{channel}.N</code></td>
+</tr>
+<tr>
+<td><strong>Quality gates</strong></td>
+<td>Static analysis, &gt;80% coverage target, dependency and secret scanning</td>
+</tr>
+<tr>
+<td><strong>Tests</strong></td>
+<td>Unit, integration, API contract</td>
+</tr>
+<tr>
+<td><strong>Deploy</strong></td>
+<td>DEV auto · STAGING manual approval · PRODUCTION blue-green</td>
+</tr>
+<tr>
+<td><strong>Migrations</strong></td>
+<td>EF Core, ordered, with rollback</td>
+</tr>
+<tr>
+<td><strong>Observability</strong></td>
+<td>Distributed tracing over W3C <code>traceparent</code> — one trace spans every service a request touches</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Targets:</strong> API &lt; 500 ms p95 · page load &lt; 2 s · uptime 99.5% (higher only for ENTERPRISE — see
+<a href="../COST/">COST.md</a> on SLA economics).</p>
+<hr />
+<h2 id="risks">Risks</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Calculation complexity</td>
+<td><strong>High</strong> — timeline</td>
+<td>Domain-expert review weekly; start with Scope 1/2; third-party fallback</td>
+</tr>
+<tr>
+<td>Poor customer data quality</td>
+<td><strong>High</strong> — wrong outputs</td>
+<td>Five-layer validation, confidence scoring, pilot assistance</td>
+</tr>
+<tr>
+<td><code>UNIT</code> scope introduced piecemeal</td>
+<td><strong>High</strong> — two resolution orders</td>
+<td><code>T1</code> does every resolver in one change</td>
+</tr>
+<tr>
+<td>Payment gateway slips</td>
+<td><strong>Medium</strong> — W6 delivery</td>
+<td>Invoice screens ship read-only rather than blocking</td>
+</tr>
+<tr>
+<td>Scope creep</td>
+<td><strong>Medium</strong></td>
+<td>Locked list, deferred backlog with estimates, weekly delivery surfaces drift on day four</td>
+</tr>
+<tr>
+<td>Third-party factor API dependency</td>
+<td><strong>Medium</strong> — lock-in</td>
+<td>Behind an interface, local cache, contractual SLA</td>
+</tr>
+<tr>
+<td>Regulatory misinterpretation</td>
+<td><strong>High</strong> — customer liability</td>
+<td><code>R0</code> + compliance sign-off; nothing configured from an unverified threshold</td>
+</tr>
+<tr>
+<td>Cross-vertical double counting</td>
+<td><strong>High</strong> — audit failure</td>
+<td>One vertical-agnostic claim register from the start</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="delivery-phases">Delivery phases</h2>
+<p>Mapped to the weekly plan in <a href="../Deliverables/#roadmap">Deliverables.md</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Weeks</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Foundation &amp; identity</td>
+<td>W1–W2</td>
+<td>Sign in; access differs correctly by scope and application</td>
+</tr>
+<tr>
+<td>Tenancy &amp; ingestion</td>
+<td>W3</td>
+<td>Provision an organisation; upload and validate data</td>
+</tr>
+<tr>
+<td>Commerce</td>
+<td>W4</td>
+<td>Subscribe, meter, invoice</td>
+</tr>
+<tr>
+<td>Configuration &amp; calculation</td>
+<td>W5</td>
+<td>Author rules; calculate emissions with audit trail</td>
+</tr>
+<tr>
+<td>Workflow &amp; vertical</td>
+<td>W6</td>
+<td>Approvals, billing, biomethane slice for Ace</td>
+</tr>
+<tr>
+<td>Release</td>
+<td>W7</td>
+<td>Frozen, deployed, documented</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

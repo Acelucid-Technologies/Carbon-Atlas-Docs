@@ -1,0 +1,1692 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Carbon Atlas platform">
+      
+      
+      
+      
+        <link rel="prev" href="../COMPETITORS/">
+      
+      
+        <link rel="next" href="../COST/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Configurability - Carbon Atlas Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configurability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Carbon Atlas Documentation" class="md-header__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carbon Atlas Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configurability
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Carbon Atlas Documentation" class="md-nav__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carbon Atlas Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPETITORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurability
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What this answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-document-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this document exists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-six-destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The six destinations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The six destinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-is-a-defect-not-a-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A is a defect, not a choice
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-seven-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The seven gates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The seven gates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gate-1-is-it-a-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 1 — Is it a control?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-2-does-our-own-shipped-code-read-it-by-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 2 — Does our own shipped code read it by name?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-3-does-it-need-integrity-uniqueness-or-an-audit-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 3 — Does it need integrity, uniqueness, or an audit trail?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-4-is-it-a-shape-question-or-a-policy-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 4 — Is it a shape question or a policy question?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-5-is-it-a-field-on-a-thing-or-a-thing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 5 — Is it a field on a thing, or a thing?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-6-what-kind-of-variation-is-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 6 — What kind of variation is it?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-7-what-is-the-decommissioning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 7 — What is the decommissioning path?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-a-changed-rule-affects-data-already-captured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a changed rule affects data already captured
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-structural-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two structural constraints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-promotion-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The promotion path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biomethane-plant-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biomethane plant fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#company-onboarding-master-company" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Company onboarding — master / Company
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-onboarding-and-role-grants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User onboarding and role grants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emission-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emission factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-report-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance report fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The register
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-getting-it-wrong-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What getting it wrong costs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-a-service-that-holds-values-but-not-definitions-validates-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a service that holds values but not definitions validates them
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EU-BIOMETHANE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU Biomethane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDENTITY-AND-SCOPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity and Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INTEGRATION_STANDARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OFFSET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES-AND-WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules and Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-answers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What this answers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-document-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this document exists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-six-destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The six destinations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The six destinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-is-a-defect-not-a-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A is a defect, not a choice
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-seven-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The seven gates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The seven gates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gate-1-is-it-a-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 1 — Is it a control?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-2-does-our-own-shipped-code-read-it-by-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 2 — Does our own shipped code read it by name?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-3-does-it-need-integrity-uniqueness-or-an-audit-trail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 3 — Does it need integrity, uniqueness, or an audit trail?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-4-is-it-a-shape-question-or-a-policy-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 4 — Is it a shape question or a policy question?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-5-is-it-a-field-on-a-thing-or-a-thing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 5 — Is it a field on a thing, or a thing?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-6-what-kind-of-variation-is-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 6 — What kind of variation is it?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-7-what-is-the-decommissioning-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 7 — What is the decommissioning path?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-a-changed-rule-affects-data-already-captured" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a changed rule affects data already captured
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-structural-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two structural constraints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-promotion-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The promotion path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biomethane-plant-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biomethane plant fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#company-onboarding-master-company" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Company onboarding — master / Company
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-onboarding-and-role-grants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User onboarding and role grants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emission-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emission factors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-report-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance report fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The register
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-getting-it-wrong-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What getting it wrong costs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-a-service-that-holds-values-but-not-definitions-validates-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a service that holds values but not definitions validates them
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="configurability">Configurability</h1>
+<p><strong>Binding, not advisory.</strong> Every new user-visible field goes through this document before it is built.</p>
+<hr />
+<h2 id="what-this-answers">What this answers</h2>
+<p><a href="../ARCHITECTURE/#the-rule-for-choosing">ARCHITECTURE.md</a> answers <em>which store</em> — relational or
+document. This is the sibling rule one level down: given the store, does this thing become a <strong>column</strong>,
+a <strong>configurable field</strong>, a <strong>rule</strong>, a <strong>catalogue row</strong>, or <strong>code</strong>?</p>
+<p>It is a different question from the one the SDK reference answers.
+<a href="../../al.net.packages/al.net.udf/README.md"><code>al.net.udf/README.md</code></a> has a table called <em>"Which
+variation to reach for"</em> — that is about which UDF mechanism to use once you have decided to use UDF.
+<strong>This document is about whether to use UDF at all</strong>, and the honest answer is usually no.</p>
+<hr />
+<h2 id="why-this-document-exists">Why this document exists</h2>
+<p>The platform has a well-built UDF engine: scope resolution across five dimensions, per-culture labels
+with overlay merge, sections and steps, server-enforced conditions, and a validator that gates on those
+conditions so a hidden field is never required.</p>
+<p>It also has a form builder — twenty-five files, roughly 2,900 lines, drag-and-drop grid layout, live
+preview — that <strong>has never contained the string "UDF"</strong> and saves to <code>localStorage</code>.</p>
+<p>Nobody did anything wrong. There was simply no point in the process where somebody had to answer
+<em>"where does this value go?"</em>, so a form designer was built to completion without one. That question is
+this document, and the six destinations below are the only permitted answers.</p>
+<hr />
+<h2 id="the-six-destinations">The six destinations</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Destination</th>
+<th>Lives in</th>
+<th>Changed by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Static column, <strong>uncatalogued</strong></td>
+<td>a Postgres column, nothing else</td>
+<td>a developer, in a release</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Static column, <strong>catalogued</strong></td>
+<td>the column <strong>+</strong> an <code>IUdfStaticFieldSource</code> entry</td>
+<td>dev owns the column; tenant owns label, order, visibility, language</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Custom UDF field</td>
+<td>a <code>UdfDefinition</code> + a value in <code>custom_fields</code></td>
+<td>the tenant, at runtime, with no release</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Hard-coded, deliberately not configurable</td>
+<td>C#</td>
+<td>nobody, without a release and a review</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>A <strong>rule</strong></td>
+<td><code>al.rules</code>, scoped</td>
+<td>the tenant, through rule authoring</td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td><strong>Reference / master data</strong></td>
+<td>a catalogue row with its own lifecycle</td>
+<td>platform or tenant, through a master-data console</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-is-a-defect-not-a-choice">A is a defect, not a choice</h3>
+<p><code>UdfStaticFields</code> already has <code>.System()</code> for columns that exist but must never render — <code>id</code>,
+<code>tenantId</code>, <code>connectionMode</code>. So a column is either <strong>placeable</strong> or <strong><code>System()</code></strong>, and both are B.
+"A" is only what exists <em>before</em> somebody wrote the resource's static-field source.</p>
+<p><strong>The standing instruction: every user-visible resource has an <code>IUdfStaticFieldSource</code>, and every column
+on it is either placeable or <code>System()</code>.</strong></p>
+<p>Today exactly one source exists — <code>al.udf/Data/MasterStaticFields.cs</code>, covering <code>master</code>/Tenant,
+Company and Branch. Everything else on the platform is in A by omission rather than by decision,
+including <code>carbon</code>/<code>biomethane-calculation</code>, which the seeder writes definitions against and which has
+no catalogue at all. A form there is all-custom by accident, not by design.</p>
+<hr />
+<h2 id="the-seven-gates">The seven gates</h2>
+<p>Work down the list. <strong>The first "yes" is the answer.</strong> Order matters — safety before queryability
+before variance. Run it in reverse and you get a configurable permission flag.</p>
+<h3 id="gate-1-is-it-a-control">Gate 1 — Is it a control?</h3>
+<blockquote>
+<p>If a tenant administrator set this to a nonsense value at 02:00, who finds out, and how long does it
+take?</p>
+</blockquote>
+<p>If the answer is "nobody", or "an auditor, in eighteen months" → <strong>D</strong>.</p>
+<p>If it grants access, moves money, or determines a regulatory outcome, it is not configuration. Covers:
+role and permission semantics, application gating, <code>IsPlatform</code>, the Annex VI calculation chain, claim
+uniqueness, discount-before-credit ordering.</p>
+<blockquote>
+<p>A form that lets a tenant administrator define what "role" means is a privilege-escalation surface
+with a drag handle.</p>
+</blockquote>
+<h3 id="gate-2-does-our-own-shipped-code-read-it-by-name">Gate 2 — Does our own shipped code read it by name?</h3>
+<blockquote>
+<p>Would I write a <code>WHERE</code>, a <code>JOIN</code>, a <code>GROUP BY</code> or a <code>switch</code> on this, in code that ships with the
+product?</p>
+</blockquote>
+<p>Yes → <strong>B</strong>. Never C.</p>
+<p><code>CustomFields["taxId"]</code> compiles perfectly. The cost arrives eighteen months later as
+<code>custom_fields -&gt;&gt; 'taxId'</code> in a compliance report: unindexed, untyped, and keyed on a string a tenant
+was free to name differently.</p>
+<h3 id="gate-3-does-it-need-integrity-uniqueness-or-an-audit-trail">Gate 3 — Does it need integrity, uniqueness, or an audit trail?</h3>
+<p>A jsonb column has <strong>no foreign key, no check constraint, no unique index</strong>. If the field is an FK, must
+be unique, or must appear in an immutable snapshot → <strong>B</strong>.</p>
+<p><strong>Regulatory corollary.</strong> Anything reproduced in an ESRS E1, RED III or UDB submission needs a value
+whose type <em>and definition history</em> are guaranteed. <code>UdfDefinition</code> carries no version history today, so
+a jsonb value read through a definition that has since been edited cannot be defended to an auditor.
+<strong>Until that lands, every disclosure input is B. No exceptions.</strong></p>
+<h3 id="gate-4-is-it-a-shape-question-or-a-policy-question">Gate 4 — Is it a shape question or a policy question?</h3>
+<blockquote>
+<p>Is this <em>"what does the form hold"</em> or <em>"when does something happen"</em>?</p>
+</blockquote>
+<p>Thresholds, ratios, "when X then Y", validity windows, approval triggers → <strong>E</strong>.</p>
+<p>UDF holds <strong>shape</strong>. A GHG-saving threshold expressed as a UDF field's default is a threshold nobody
+can dry-run, monitor, or replay — all three of which <code>al.rules</code> gives you for free.</p>
+<h3 id="gate-5-is-it-a-field-on-a-thing-or-a-thing">Gate 5 — Is it a field on a thing, or a thing?</h3>
+<p>Emission factors, industries, data types, offset measures, certification schemes, location factors →
+<strong>F</strong>.</p>
+<p>These have their own lifecycle, their own version, and their own console. Modelling "per-tenant emission
+factor override" as custom fields on a calculation is the single most expensive misfiling available
+here, because an audit snapshot has to record <em>which factor version was used</em> and a bag cannot answer
+that.</p>
+<h3 id="gate-6-what-kind-of-variation-is-it">Gate 6 — What kind of variation is it?</h3>
+<p>This is the B-versus-C discriminator, and the one people get wrong.</p>
+<table>
+<thead>
+<tr>
+<th>The variation across tenants</th>
+<th>Destination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None — every tenant has it, the platform breaks without it</td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>Same value, different <strong>name / position / language / visibility / required-here</strong></td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>Same value, different <strong>presence</strong> (some industries capture it, others don't)</td>
+<td><strong>B</strong> + a <code>UdfCondition</code></td>
+</tr>
+<tr>
+<td>Tenants invent the field itself; the keys differ between tenants</td>
+<td><strong>C</strong></td>
+</tr>
+<tr>
+<td>One tenant asked for it and no roadmap item reads it</td>
+<td><strong>C</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The common error is seeing <em>any</em> variation and reaching for C.</strong> Most variation on an enterprise form
+is presentational, and B already handles all of it: per-scope label overlay, translation with fallback,
+order, colspan, per-application visibility, condition gating, and required-tightening.</p>
+<p>The cost of B is one line in a builder chain. The cost of skipping it is a support ticket per tenant,
+per label, forever.</p>
+<h3 id="gate-7-what-is-the-decommissioning-path">Gate 7 — What is the decommissioning path?</h3>
+<p>Only reached if the answer so far is C. Answer all three <strong>before</strong> creating the definition:</p>
+<ol>
+<li><strong>Renaming <code>FieldKey</code> orphans every value already written under it.</strong> It is immutable in practice
+   once anything is saved — which is why the update request type does not expose it. Are we certain of
+   the name?</li>
+<li><strong>Deleting the definition strands the values.</strong> They stay in the bag, the validator sees keys it does
+   not recognise, and the record cannot be saved again. <strong>Set <code>isRetired</code> instead</strong> — a retired field
+   stops rendering and stops being validated, but its key is still recognised, so those records keep
+   saving. Delete only once a sweep confirms no values remain.</li>
+<li><strong>Tightening a rule does not reach backwards.</strong> See versioning below.</li>
+</ol>
+<p>No confident answer to all three → <strong>B</strong>.</p>
+<hr />
+<h2 id="how-a-changed-rule-affects-data-already-captured">How a changed rule affects data already captured</h2>
+<p>Every edit to a definition creates a new revision. The live document keeps its id and holds the
+current revision; the outgoing one is archived beside it.</p>
+<pre><code>def-digestate            Version 3, IsCurrent true    ← forms resolve this, new capture uses it
+def-digestate::v2        Version 2, IsCurrent false   ← records captured under v2 validate against this
+def-digestate::v1        Version 1, IsCurrent false
+</code></pre>
+<p>Values record the revision they were captured under, in a reserved <code>__v</code> key inside the same JSON bag:</p>
+<pre><code class="language-json">{ &quot;digestateOutputTonnes&quot;: 412.5,
+  &quot;__v&quot;: { &quot;digestateOutputTonnes&quot;: 2 } }
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New value</td>
+<td>Validated by the current revision, stamped with it</td>
+</tr>
+<tr>
+<td>Existing value, edited</td>
+<td>Keeps its original revision and is <strong>still validated by it</strong></td>
+</tr>
+<tr>
+<td>Value with no stamp</td>
+<td>Reads as revision 1 — what pre-versioning records were captured under</td>
+</tr>
+<tr>
+<td>Archived revision missing</td>
+<td>Falls back to the live definition; losing history must not lose the record</td>
+</tr>
+<tr>
+<td>Stamp for a removed value</td>
+<td>Dropped, so the map does not accumulate every field the record ever held</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What this does and does not buy you.</strong> It means tightening a bound today cannot invalidate a record
+saved last year, and that an auditor can be told which rule produced a figure. It does <strong>not</strong> mean two
+versions of a form render side by side — a form always resolves the current revision. Versioning
+governs <em>interpretation of stored values</em>, not presentation.</p>
+<p><strong>Gate 3 still stands.</strong> Definition history makes a jsonb value defensible; it does not give it a
+foreign key, a unique index or a check constraint. Disclosure inputs remain <strong>B</strong>.</p>
+<hr />
+<h2 id="two-structural-constraints">Two structural constraints</h2>
+<p><strong>A condition source must be B or C, never A.</strong> A <code>UdfCondition</code> keyed on <code>industryKey</code> needs that key
+in the catalogue, or the client cannot render the gating and the server has nothing to evaluate against.
+Uncatalogued columns cannot gate anything.</p>
+<p><strong>No field participating in an authorization decision may be C.</strong> The validator is the only integrity a
+jsonb bag has. An authorization input in a bag is a vulnerability, not a configuration choice.</p>
+<hr />
+<h2 id="the-promotion-path">The promotion path</h2>
+<pre><code>C → B   Expected, and healthy. A key that 80% of tenants define identically is a column
+        the product has not admitted to yet. Promote: add the column, add the catalogue
+        entry, backfill from the bag, retire the definition.
+
+B → C   Essentially never. It surrenders the foreign key, the index and the type, and it
+        is a data migration. If you want per-tenant labels, B already gives you them.
+
+C → E   Common. &quot;Threshold&quot; fields discovered in the bag belong in al.rules.
+</code></pre>
+<p>Promotion should be a decision, not a hunch. That needs a cross-tenant report of custom keys by
+definition count — scheduled, not yet built.</p>
+<hr />
+<h2 id="worked-examples">Worked examples</h2>
+<p>A framework with no worked examples gets re-derived differently by every reader.</p>
+<h3 id="biomethane-plant-fields">Biomethane plant fields</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>→</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>feedstockType</code>, <code>digestateHandling</code>, <code>transportDistanceKm</code></td>
+<td><strong>B</strong></td>
+<td>The Annex VI chain reads them by name and the audit snapshot records them. Gates 2 and 3. The intuition "it varies per plant" is right, but the variation is <em>values</em>, not <em>shape</em>.</td>
+</tr>
+<tr>
+<td><code>plantPermitNumber</code>, <code>gridConnectionRef</code>, <code>shiftOperatorContact</code></td>
+<td><strong>C</strong></td>
+<td>Nothing in our code reads them; they appear on a form and a tenant's own report. Gate 6, row 4.</td>
+</tr>
+<tr>
+<td>GHG-saving threshold (65% / 70%)</td>
+<td><strong>E</strong></td>
+<td>A policy with a date-bound cut-over. In <code>al.rules</code> it can be dry-run before it bites.</td>
+</tr>
+<tr>
+<td>Mass-balance period boundary; claim uniqueness</td>
+<td><strong>D</strong></td>
+<td>Not disableable. Gate 1.</td>
+</tr>
+<tr>
+<td>Certification scheme (ISCC EU, REDcert)</td>
+<td><strong>F</strong></td>
+<td>A scheme has validity dates and a certificate lifecycle. It is a catalogue row, not a dropdown value.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="company-onboarding-master-company">Company onboarding — <code>master</code> / <code>Company</code></h3>
+<p><code>name</code>, <code>code</code>, <code>domain</code>, <code>taxId</code>, <code>type</code>, <code>status</code> → <strong>B</strong>, all already catalogued.</p>
+<p><code>taxId</code> is the instructive one. It looks like "just a string", but its own tooltip says it appears on
+generated compliance documents — so Gate 3 pins it to a column before Gate 6 ever gets a chance to
+argue about variation.</p>
+<p><code>id</code>, <code>tenantId</code>, <code>createdAt</code> → <strong>B via <code>.System()</code></strong>.
+<code>internalCostCentre</code>, <code>parentGroupRef</code>, <code>localSicCode</code> → <strong>C</strong>.</p>
+<p><code>industryKey</code> deserves its own note: it is deliberately <em>not</em> a column on <code>CompanyCatalog</code> — it lives on
+the branch-industry relationship and is computed as a union. It is nonetheless the platform's canonical
+condition source, which makes the first structural constraint concrete: <strong>that key has to reach the form
+as a catalogued field, or "selecting biomethane reveals four more fields" cannot resolve server-side.</strong></p>
+<h3 id="user-onboarding-and-role-grants">User onboarding and role grants</h3>
+<p><code>email</code>, <code>firstName</code>, <code>lastName</code>, <code>phoneNumber</code> → <strong>B</strong>.</p>
+<p>Role, scope, application access, validity dates, grant type → <strong>D</strong>. Edited through a purpose-built
+screen against real tables.</p>
+<p><code>employeeId</code>, <code>department</code>, <code>costCentre</code> → <strong>C</strong> — no authorization code reads them.</p>
+<p>This is worth stating plainly because the opposite is tempting: the onboarding form <em>looks</em> like one
+form, so it looks like one destination. It is two. The identity half is B and C; the granting half is D,
+and the tell is Gate 1 — ticking no applications grants <em>every</em> application, so a hideable applications
+selector silently grants the mobile app to everyone onboarded through it.</p>
+<h3 id="emission-factors">Emission factors</h3>
+<p><strong>F</strong>, and they already live in the document store. Value, source, vintage, region, version → catalogue
+rows. <em>Which</em> factor set a branch uses → a <strong>scoped preference</strong>, because that is a resolution question
+with a provenance view attached. Not a UDF field on any form.</p>
+<h3 id="compliance-report-fields">Compliance report fields</h3>
+<p>Every disclosed figure → <strong>B</strong>, and locked at submission.</p>
+<p>Qualitative narrative a tenant authors → <strong>C is acceptable only if the snapshot copies the resolved
+field definition alongside the value at lock time.</strong> That is a one-line addition where the snapshot is
+written, and it is the whole difference between a reproducible disclosure and a liability.</p>
+<hr />
+<h2 id="the-register">The register</h2>
+<p>The gates decide new fields. <strong>The register is what a reviewer checks a pull request against.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Resource</th>
+<th>Owner</th>
+<th>Static-field source</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>master</code></td>
+<td>Tenant</td>
+<td>al.master</td>
+<td><code>MasterStaticFields</code></td>
+<td>✅ catalogued</td>
+</tr>
+<tr>
+<td><code>master</code></td>
+<td>Company</td>
+<td>al.master</td>
+<td><code>MasterStaticFields</code></td>
+<td>✅ catalogued · <strong>C enabled</strong></td>
+</tr>
+<tr>
+<td><code>master</code></td>
+<td>Branch</td>
+<td>al.master</td>
+<td><code>MasterStaticFields</code></td>
+<td>✅ catalogued · <strong>C enabled</strong></td>
+</tr>
+<tr>
+<td><code>master</code></td>
+<td>Unit</td>
+<td>al.master</td>
+<td><code>MasterStaticFields</code></td>
+<td>⬜ pending the unit scope dimension</td>
+</tr>
+<tr>
+<td><code>auth</code></td>
+<td>User</td>
+<td>al.auth</td>
+<td>—</td>
+<td>⬜ identity half only; grants are D</td>
+</tr>
+<tr>
+<td><code>carbon</code></td>
+<td>biomethane-calculation</td>
+<td>al.carbon</td>
+<td><code>CarbonStaticFields</code></td>
+<td>✅ catalogued</td>
+</tr>
+<tr>
+<td><code>carbon</code></td>
+<td>digestate-entry</td>
+<td>al.carbon</td>
+<td><code>CarbonStaticFields</code></td>
+<td>✅ catalogued</td>
+</tr>
+<tr>
+<td><code>carbon</code></td>
+<td>Batch, Feedstock</td>
+<td>al.carbon</td>
+<td><code>CarbonStaticFields</code></td>
+<td>⬜ entities not built yet</td>
+</tr>
+<tr>
+<td><code>ingestion</code></td>
+<td>ImportTemplate</td>
+<td>al.ingestion</td>
+<td><code>IngestionStaticFields</code></td>
+<td>✅ catalogued</td>
+</tr>
+<tr>
+<td><code>ingestion</code></td>
+<td>ActivityData</td>
+<td>al.ingestion</td>
+<td><code>IngestionStaticFields</code></td>
+<td>⬜ scheduled</td>
+</tr>
+<tr>
+<td><code>offset</code></td>
+<td>Measure, Plan</td>
+<td>al.offset</td>
+<td>—</td>
+<td>⬜ measures are <strong>F</strong>, not fields</td>
+</tr>
+</tbody>
+</table>
+<p>"C enabled" means the entity implements <code>IUdfExtensible</code> <strong>and</strong> its <code>DbContext</code> maps
+<code>custom_fields</code> — both, or custom values have nowhere to land.</p>
+<hr />
+<h2 id="what-getting-it-wrong-costs">What getting it wrong costs</h2>
+<p>Each of these is a real property of the system today, not a hypothetical.</p>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>What it costs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C where B belonged</td>
+<td>An unindexed <code>-&gt;&gt;</code> in every report that touches it, against a key a tenant can rename</td>
+</tr>
+<tr>
+<td>C where D belonged</td>
+<td>A permission or a calculation input that a tenant administrator can edit at 02:00</td>
+</tr>
+<tr>
+<td>C where E belonged</td>
+<td>A threshold that cannot be dry-run, monitored, or replayed</td>
+</tr>
+<tr>
+<td>C where F belonged</td>
+<td>An audit that cannot say which version of a factor produced a figure</td>
+</tr>
+<tr>
+<td>A (no catalogue)</td>
+<td>Every label change is a release; the field cannot gate a condition</td>
+</tr>
+<tr>
+<td>Deleting a definition instead of retiring it</td>
+<td>Values stay in the bag as unrecognised keys and the record cannot be saved again</td>
+</tr>
+<tr>
+<td>Renaming a <code>FieldKey</code></td>
+<td>Every value written under the old key is orphaned, silently</td>
+</tr>
+<tr>
+<td><strong>Hiding</strong> a placement to withdraw a field</td>
+<td>Same as deleting, and it looks harmless. Fixed — a hidden field is now known-but-ungoverned — but the instinct is still wrong: use <code>isRetired</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-a-service-that-holds-values-but-not-definitions-validates-them">How a service that holds values but not definitions validates them</h2>
+<p>Only al.udf is wired to the document store. Every other service sends the payload to
+<code>POST /api/v1/udf/validate/{module}/{resource}</code> before writing, and stamps the returned
+<code>currentVersions</code> onto newly-captured values.</p>
+<p>Enforcement does not rely on remembering to do this. A <code>SaveChangesInterceptor</code> refuses to persist a
+modified <code>CustomFields</code> that was not validated during the request, matched <strong>by content</strong> — so
+validating one payload and persisting a different one is refused too. The rule was previously stated
+in three READMEs and followed in none; it is now enforced by the thing that performs the write.</p>
+<hr />
+<h2 id="related">Related</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Owns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../al.net.packages/al.net.udf/README.md"><code>al.net.udf/README.md</code></a></td>
+<td>How the mechanism works — scope resolution, <code>LocalizedText</code>, conditions, cost model</td>
+</tr>
+<tr>
+<td><a href="../../Carbon-Atlas-Services/al.udf/README.md"><code>al.udf/README.md</code></a></td>
+<td>The service: endpoints, seeding, platform behaviour</td>
+</tr>
+<tr>
+<td><a href="../packages/react/src/forms/udf/README.md"><code>packages/react/src/forms/udf/README.md</code></a></td>
+<td>Client rendering, type mapping, and why the client decides nothing</td>
+</tr>
+<tr>
+<td><a href="../ARCHITECTURE/">ARCHITECTURE.md</a></td>
+<td>Relational versus document — the store question, one level up from this one</td>
+</tr>
+<tr>
+<td><a href="../INTEGRATION_STANDARD/">INTEGRATION_STANDARD.md</a></td>
+<td>How a screen talks to a service</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

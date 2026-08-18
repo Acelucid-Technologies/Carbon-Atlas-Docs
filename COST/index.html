@@ -1,0 +1,1865 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Carbon Atlas platform">
+      
+      
+      
+      
+        <link rel="prev" href="../CONFIGURABILITY/">
+      
+      
+        <link rel="next" href="../EU-BIOMETHANE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Cost - Carbon Atlas Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cost-pricing-subscription-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Carbon Atlas Documentation" class="md-header__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carbon Atlas Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cost
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Carbon Atlas Documentation" class="md-nav__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carbon Atlas Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPETITORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONFIGURABILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-figures-are-placeholders-with-a-documented-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All figures are placeholders with a documented basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-layer-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The three-layer model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-1-fixed-platform-costs-monthly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 1 — Fixed platform costs (monthly)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-2-tenant-allocation-shared-vs-dedicated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 2 — Tenant allocation: shared vs dedicated
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-3-consumption-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 3 — Consumption factors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layer 3 — Consumption factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-retention-per-gb-month" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage &amp; retention (per GB / month)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications-per-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications (per message)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-ai-per-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute &amp; AI (per operation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-party-pass-through" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Third-party pass-through
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume scaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscription-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription plans
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscription plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-ons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add-ons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credit-packs-wallet-top-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credit packs (wallet top-up)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-a-price-is-actually-computed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a price is actually computed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-residency-the-compliance-tax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data residency — the compliance tax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-margins-have-to-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the margins have to cover
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-premise-self-hosted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On-premise / self-hosted
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EU-BIOMETHANE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU Biomethane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDENTITY-AND-SCOPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity and Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INTEGRATION_STANDARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OFFSET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES-AND-WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules and Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#all-figures-are-placeholders-with-a-documented-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        All figures are placeholders with a documented basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-layer-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The three-layer model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-1-fixed-platform-costs-monthly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 1 — Fixed platform costs (monthly)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-2-tenant-allocation-shared-vs-dedicated" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 2 — Tenant allocation: shared vs dedicated
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-3-consumption-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer 3 — Consumption factors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layer 3 — Consumption factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#storage-retention-per-gb-month" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage &amp; retention (per GB / month)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications-per-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications (per message)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-ai-per-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute &amp; AI (per operation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-party-pass-through" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Third-party pass-through
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#volume-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volume scaling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscription-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscription plans
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscription plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-ons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add-ons
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credit-packs-wallet-top-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credit packs (wallet top-up)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-a-price-is-actually-computed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a price is actually computed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-residency-the-compliance-tax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data residency — the compliance tax
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-margins-have-to-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the margins have to cover
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-premise-self-hosted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On-premise / self-hosted
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open decisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cost-pricing-subscription-design">Cost, Pricing &amp; Subscription Design</h1>
+<p>What it costs to run a tenant, and how that becomes a price a customer pays.</p>
+<p>← <a href="../Deliverables/">Deliverables.md</a> · see also <a href="../ARCHITECTURE/">ARCHITECTURE.md</a></p>
+<hr />
+<blockquote>
+<h2 id="all-figures-are-placeholders-with-a-documented-basis">All figures are placeholders with a documented basis</h2>
+<p>Every number below is an <strong>estimate to be replaced with measured data</strong>, and each says what it is
+derived from so it can be checked rather than trusted. They exist so the pricing <em>engine</em> (<code>C3</code>)
+can be built against realistic shapes.</p>
+<p><strong>Cloud list prices change and vary by region.</strong> Anything published to a customer must be
+recalculated against current rates for the actual deployment region — see
+<a href="#data-residency-the-compliance-tax">Data residency</a>.</p>
+</blockquote>
+<hr />
+<h2 id="the-three-layer-model">The three-layer model</h2>
+<p>Carbon Atlas has a cost structure that a single per-seat price cannot cover, because three
+different things drive spend.</p>
+<pre><code>Layer 1   Fixed platform      shared infrastructure, amortised over all tenants
+Layer 2   Tenant allocation   what one tenant occupies whether or not they use it
+Layer 3   Consumption         what they actually do — storage, notifications, AI, reports
+</code></pre>
+<p>A per-seat price only works when cost tracks headcount. Here it does not: a tenant with five users
+and a million telemetry rows costs more than one with five hundred users and monthly spreadsheet
+uploads. So the model is <strong>platform fee + included allowances + metered consumption</strong>, with the
+existing quota and wallet machinery doing the metering.</p>
+<p><strong>Why this shape and not pure usage-based:</strong> pure usage means a customer cannot budget, and a
+finance director who cannot forecast a line item does not sign. The platform fee buys predictability;
+the allowance covers normal use; metering catches the outliers who genuinely cost more.</p>
+<hr />
+<h2 id="layer-1-fixed-platform-costs-monthly">Layer 1 — Fixed platform costs (monthly)</h2>
+<p>The burn before a single tenant does anything.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Est. base / month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PostgreSQL (managed, HA)</td>
+<td>Relational: tenants, grants, calculations, invoices, audit</td>
+<td>~$400</td>
+</tr>
+<tr>
+<td>Cosmos DB / document store</td>
+<td>UDF configuration, emission factors, activity documents</td>
+<td>~$250</td>
+</tr>
+<tr>
+<td>Application hosting (12 services)</td>
+<td>Containers, autoscaling, load balancing</td>
+<td>~$450</td>
+</tr>
+<tr>
+<td>Redis / cache</td>
+<td>Sessions, coherent cache, rate limiting, nonces</td>
+<td>~$120</td>
+</tr>
+<tr>
+<td>Blob storage (hot tier, platform)</td>
+<td>Templates, exports, system artefacts</td>
+<td>~$50</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>Traces, metrics, logs — 90-day retention</td>
+<td>~$180</td>
+</tr>
+<tr>
+<td>Key management / secrets</td>
+<td></td>
+<td>~$30</td>
+</tr>
+<tr>
+<td>CI/CD &amp; registries</td>
+<td></td>
+<td>~$70</td>
+</tr>
+<tr>
+<td><strong>Total shared baseline</strong></td>
+<td><strong>Minimum monthly burn</strong></td>
+<td><strong>~$1,550</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>What this means commercially.</strong> At a $199/month platform fee, <strong>8 tenants</strong> cover the baseline
+before any consumption revenue. At $499, three do. That ratio is the single most useful number in
+this document for setting the entry price.</p>
+<p>Observability is the line people cut first and regret: 90-day trace retention is what makes a
+customer incident answerable. Cutting it saves ~$180 and costs a week of engineering the first time
+something goes wrong in production.</p>
+<hr />
+<h2 id="layer-2-tenant-allocation-shared-vs-dedicated">Layer 2 — Tenant allocation: shared vs dedicated</h2>
+<p>Two infrastructure classes, and the boundary is a commercial decision (open decision #5).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Shared</strong></th>
+<th><strong>Dedicated</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Database</td>
+<td>Shared cluster, row-level isolation by tenant</td>
+<td>Own database or cluster</td>
+</tr>
+<tr>
+<td>Document store</td>
+<td>Shared account, partition per tenant</td>
+<td>Own account</td>
+</tr>
+<tr>
+<td>Compute</td>
+<td>Shared service pool</td>
+<td>Dedicated pool or namespace</td>
+</tr>
+<tr>
+<td>Blob</td>
+<td>Shared account, container per tenant</td>
+<td>Own account, own keys</td>
+</tr>
+<tr>
+<td><strong>Incremental cost / month</strong></td>
+<td><strong>~$8–25</strong></td>
+<td><strong>~$450–900</strong></td>
+</tr>
+<tr>
+<td>Noisy-neighbour risk</td>
+<td>Present; mitigated by quotas and rate limits</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Data residency control</td>
+<td>Region-level</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Suits</td>
+<td>SMB, mid-market, trial</td>
+<td>Enterprise, regulated, on-premise-adjacent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The platform already supports this.</strong> <code>TenantCatalog</code> carries <code>InfraType</code> (Shared / Dedicated),
+<code>ConnectionMode</code> and an optional <code>DatabaseConfig</code> — so this is a provisioning decision, not an
+architectural one. <code>C12</code> surfaces it.</p>
+<p><strong>Price dedicated at cost + margin, never bundled.</strong> A dedicated tenant is 30–50× the incremental
+cost of a shared one. Folding that into a plan price means shared tenants subsidise dedicated ones,
+and the enterprise deal that looked profitable is the one destroying the margin.</p>
+<hr />
+<h2 id="layer-3-consumption-factors">Layer 3 — Consumption factors</h2>
+<p>The metered half. Each maps to a burn against quota or wallet.</p>
+<h3 id="storage-retention-per-gb-month">Storage &amp; retention (per GB / month)</h3>
+<table>
+<thead>
+<tr>
+<th>Retention</th>
+<th>Base (S3/Blob standard)</th>
+<th>+10% op.</th>
+<th>25% margin</th>
+<th>35% margin</th>
+<th>45% margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot, 12 months</td>
+<td>$0.023</td>
+<td>$0.025</td>
+<td>$0.034</td>
+<td>$0.039</td>
+<td>$0.046</td>
+</tr>
+<tr>
+<td>Cool, 12–36 months</td>
+<td>$0.010</td>
+<td>$0.011</td>
+<td>$0.015</td>
+<td>$0.017</td>
+<td>$0.020</td>
+</tr>
+<tr>
+<td>Archive, 7 years (audit)</td>
+<td>$0.004</td>
+<td>$0.004</td>
+<td>$0.006</td>
+<td>$0.007</td>
+<td>$0.008</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Audit records must be kept for seven years</strong> and are the volume that quietly dominates. Tiering
+them to archive is the difference between $0.046 and $0.008 per GB-month — a 5.75× saving on the
+largest and least-read dataset. Build lifecycle rules at provisioning, not later.</p>
+<h3 id="notifications-per-message">Notifications (per message)</h3>
+<p>Third-party pass-through, and the place a "free" feature becomes expensive.</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Base cost</th>
+<th>+10%</th>
+<th>25%</th>
+<th>35%</th>
+<th>45%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email (transactional)</td>
+<td>$0.0004</td>
+<td>$0.0004</td>
+<td>$0.0006</td>
+<td>$0.0007</td>
+<td>$0.0008</td>
+</tr>
+<tr>
+<td>SMS (EU average ⚠️ varies 5× by country)</td>
+<td>$0.0450</td>
+<td>$0.0495</td>
+<td>$0.0660</td>
+<td>$0.0762</td>
+<td>$0.0900</td>
+</tr>
+<tr>
+<td>WhatsApp Business (utility)</td>
+<td>$0.0350</td>
+<td>$0.0385</td>
+<td>$0.0513</td>
+<td>$0.0592</td>
+<td>$0.0700</td>
+</tr>
+<tr>
+<td>Teams / webhook</td>
+<td>$0.0000</td>
+<td>$0.0000</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Push (mobile)</td>
+<td>$0.0000</td>
+<td>$0.0000</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>SMS is ~100× the cost of email and varies enormously by destination country.</strong> A tenant that
+routes every workflow notification to SMS at branch level can turn a profitable account into a
+loss-making one without anyone noticing until the monthly bill. Three defences, all needed:
+<strong>(1)</strong> SMS and WhatsApp burn wallet credits, email does not; <strong>(2)</strong> the provider-binding UI
+shows the per-channel cost at the point of choosing; <strong>(3)</strong> a per-scope monthly cap with an alert.</p>
+<p>This is exactly what the DB-driven provider bindings were built for — branch A on SMS, branch B on
+WhatsApp, branch C on Teams. The cost consequence has to be visible where the choice is made.</p>
+</blockquote>
+<h3 id="compute-ai-per-operation">Compute &amp; AI (per operation)</h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Base</th>
+<th>+10%</th>
+<th>25%</th>
+<th>35%</th>
+<th>45%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emission calculation (cached factors)</td>
+<td>$0.0002</td>
+<td>$0.0002</td>
+<td>$0.0003</td>
+<td>$0.0003</td>
+<td>$0.0004</td>
+</tr>
+<tr>
+<td>Emission calculation (third-party factor lookup)</td>
+<td>$0.0030</td>
+<td>$0.0033</td>
+<td>$0.0044</td>
+<td>$0.0051</td>
+<td>$0.0060</td>
+</tr>
+<tr>
+<td>Bulk import, per 1,000 rows</td>
+<td>$0.0150</td>
+<td>$0.0165</td>
+<td>$0.0220</td>
+<td>$0.0254</td>
+<td>$0.0300</td>
+</tr>
+<tr>
+<td>Export / report generation (standard)</td>
+<td>$0.0100</td>
+<td>$0.0110</td>
+<td>$0.0147</td>
+<td>$0.0169</td>
+<td>$0.0200</td>
+</tr>
+<tr>
+<td>PDF disclosure pack</td>
+<td>$0.0500</td>
+<td>$0.0550</td>
+<td>$0.0733</td>
+<td>$0.0846</td>
+<td>$0.1000</td>
+</tr>
+<tr>
+<td>Rule evaluation, per 1,000</td>
+<td>$0.0010</td>
+<td>$0.0011</td>
+<td>$0.0015</td>
+<td>$0.0017</td>
+<td>$0.0020</td>
+</tr>
+<tr>
+<td>Workflow instance</td>
+<td>$0.0020</td>
+<td>$0.0022</td>
+<td>$0.0029</td>
+<td>$0.0034</td>
+<td>$0.0040</td>
+</tr>
+<tr>
+<td>AI offset-plan generation (LLM)</td>
+<td>$0.1500</td>
+<td>$0.1650</td>
+<td>$0.2200</td>
+<td>$0.2538</td>
+<td>$0.3000</td>
+</tr>
+<tr>
+<td>AI anomaly detection, per 1,000 records</td>
+<td>$0.0800</td>
+<td>$0.0880</td>
+<td>$0.1173</td>
+<td>$0.1354</td>
+<td>$0.1600</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cache the emission factors.</strong> $0.0030 → $0.0002 is a 15× difference on the most-repeated operation
+in the product. <code>E1</code> specifies the local cache with third-party fallback; the cost table is why it is
+not optional.</p>
+<h3 id="third-party-pass-through">Third-party pass-through</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Model</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Emission factor API (Climatiq / Carbon Interface)</td>
+<td>Per lookup or tier</td>
+<td>Cache aggressively</td>
+</tr>
+<tr>
+<td>UDB integration</td>
+<td>Likely free (regulatory) ⚠️</td>
+<td>Confirm in <code>R0</code></td>
+</tr>
+<tr>
+<td>Payment gateway</td>
+<td>~2.9% + $0.30</td>
+<td><strong>Never absorb on small transactions</strong> — see below</td>
+</tr>
+<tr>
+<td>Certification scheme portal</td>
+<td>Per certificate</td>
+<td>Varies by scheme</td>
+</tr>
+<tr>
+<td>Identity verification (KYC, enterprise)</td>
+<td>~$0.50–2.00 per check</td>
+<td>Add-on only</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>The payment-fee trap.</strong> At 2.9% + $0.30, a $10 transaction costs $0.59 — <strong>5.9%</strong>. Wallet
+top-ups must have a minimum (~$50) or the smallest top-ups are the least profitable. This is the
+same reason the attached proctoring analysis warns against fractional margins in B2C.</p>
+</blockquote>
+<hr />
+<h2 id="volume-scaling">Volume scaling</h2>
+<p>Cloud costs fall with volume; prices should follow, on a published ladder rather than ad hoc
+discounting.</p>
+<table>
+<thead>
+<tr>
+<th>Tenant scale</th>
+<th>Cost multiplier</th>
+<th>Pricing posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 50 users / &lt; 100 GB</td>
+<td>1.0×</td>
+<td>Full retail — 45% margin</td>
+</tr>
+<tr>
+<td>50–500 users / 100 GB–1 TB</td>
+<td>0.9×</td>
+<td>35% margin tier</td>
+</tr>
+<tr>
+<td>500+ users / 1 TB+</td>
+<td>0.75×</td>
+<td>25% margin tier (enterprise)</td>
+</tr>
+</tbody>
+</table>
+<p>Publishing the ladder means a salesperson does not invent a discount, and a customer who grows knows
+what happens next.</p>
+<hr />
+<h2 id="subscription-plans">Subscription plans</h2>
+<p>Mapped onto the machinery that already exists — <code>SubscriptionPlan</code>, <code>TenantQuota</code>, <code>Wallet</code>,
+<code>PromoCode</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>FREE</strong></th>
+<th><strong>TRIAL</strong></th>
+<th><strong>PRO</strong></th>
+<th><strong>ENTERPRISE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform fee / month</td>
+<td>$0</td>
+<td>$0 (30 days)</td>
+<td><strong>$499</strong></td>
+<td>From <strong>$2,500</strong></td>
+</tr>
+<tr>
+<td>Users</td>
+<td>3</td>
+<td>10</td>
+<td>50</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Companies / branches</td>
+<td>1 / 1</td>
+<td>1 / 3</td>
+<td>5 / 25</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Storage included</td>
+<td>1 GB</td>
+<td>10 GB</td>
+<td>250 GB</td>
+<td>2 TB</td>
+</tr>
+<tr>
+<td>Calculations / month</td>
+<td>100</td>
+<td>1,000</td>
+<td>50,000</td>
+<td>Unlimited</td>
+</tr>
+<tr>
+<td>Wallet credits / month</td>
+<td>0</td>
+<td>500 (no rollover)</td>
+<td>2,000 (no rollover)</td>
+<td>Negotiated</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>Shared</td>
+<td>Shared</td>
+<td>Shared</td>
+<td><strong>Dedicated available</strong></td>
+</tr>
+<tr>
+<td>Rules &amp; workflows</td>
+<td>—</td>
+<td>Read-only</td>
+<td>Full</td>
+<td>Full + custom shapes</td>
+</tr>
+<tr>
+<td>Verticals</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>All</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>Community</td>
+<td>Email</td>
+<td>Business hours</td>
+<td>SLA + named contact</td>
+</tr>
+<tr>
+<td>Data residency</td>
+<td>Default region</td>
+<td>Default</td>
+<td>Choice of region</td>
+<td><strong>Any, incl. dedicated</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wallet credits do not roll over</strong> on FREE, TRIAL and PRO — <code>PeriodicWalletUnitsRollOver = false</code>
+means <em>top up to</em>, not <em>add on top</em>. Label it that way in <code>C1</code> or it will be configured backwards
+and either give away credits or withhold them every period.</p>
+<h3 id="add-ons">Add-ons</h3>
+<table>
+<thead>
+<tr>
+<th>Add-on</th>
+<th>Price</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extra storage</td>
+<td>$0.05 / GB / month</td>
+<td>~2× cost at 45% margin plus lifecycle overhead</td>
+</tr>
+<tr>
+<td>Extra users</td>
+<td>$15 / user / month</td>
+<td>Support-driven, not infrastructure-driven</td>
+</tr>
+<tr>
+<td>Additional vertical</td>
+<td>$250 / month</td>
+<td>Measure library, rules, workflows, factors</td>
+</tr>
+<tr>
+<td>Dedicated infrastructure</td>
+<td>From $1,200 / month</td>
+<td>Cost + margin; <strong>never bundled</strong></td>
+</tr>
+<tr>
+<td>Advanced analytics / BI embed</td>
+<td>$200 / month</td>
+<td></td>
+</tr>
+<tr>
+<td>Human-verified audit support</td>
+<td>$500 / month</td>
+<td>People, not compute</td>
+</tr>
+<tr>
+<td>Custom rule shape development</td>
+<td>Quote</td>
+<td>Platform change — see <a href="../RULES-AND-WORKFLOWS/">RULES-AND-WORKFLOWS.md</a></td>
+</tr>
+<tr>
+<td>Extended audit retention (10 yr)</td>
+<td>$0.01 / GB / month</td>
+<td>Archive tier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="credit-packs-wallet-top-up">Credit packs (wallet top-up)</h3>
+<p>For metered consumption beyond the allowance. 1 credit = $0.01 of metered spend at list.</p>
+<table>
+<thead>
+<tr>
+<th>Pack</th>
+<th>Credits</th>
+<th>Price</th>
+<th>Effective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starter</td>
+<td>5,000</td>
+<td>$60</td>
+<td>$0.012 / credit</td>
+</tr>
+<tr>
+<td>Growth</td>
+<td>25,000</td>
+<td>$275</td>
+<td>$0.011 / credit</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>100,000</td>
+<td>$1,000</td>
+<td>$0.010 / credit</td>
+</tr>
+</tbody>
+</table>
+<p>Minimum top-up <strong>$50</strong> — the payment-fee trap above.</p>
+<hr />
+<h2 id="how-a-price-is-actually-computed">How a price is actually computed</h2>
+<p><code>C3</code> implements this server-side. <strong>The client never computes a total</strong> — a client figure that
+disagrees with the invoice is a chargeback and a support case.</p>
+<pre><code>Monthly charge
+  = platform fee (plan)
+  + Σ add-ons
+  + Σ over-allowance consumption × unit price × volume multiplier
+  − promotional discount        (rounds DOWN)
+  − wallet credits applied
+  + tax
+</code></pre>
+<p>Two rounding rules pull in opposite directions, and both are deliberate:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Discounts round down</strong></td>
+<td>In the customer's favour. A rounding dispute over a discount is not worth the support cost.</td>
+</tr>
+<tr>
+<td><strong>Overage rounds up</strong></td>
+<td>In the platform's favour, and it must — a sub-cent rate that rounds to zero makes a paid feature free. <code>C2</code> validates against exactly this.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fix and document the order of operations.</strong> Discount-before-credit and credit-before-discount give
+different totals. <code>C10</code> pins the chosen order with a test against a worked example, because the day
+it changes silently is the day a month of invoices is wrong.</p>
+<hr />
+<h2 id="data-residency-the-compliance-tax">Data residency — the compliance tax</h2>
+<p>EU-only or GovCloud regions run <strong>20–30% higher</strong> than the cheapest region for compute and storage.</p>
+<p><strong>Do not absorb it.</strong> A "Data Localisation Premium" of +30% on the platform fee and consumption
+rates maintains the margin. Customers who mandate residency understand that it costs more; customers
+who do not should not pay for it.</p>
+<p>Relevant here because the Ace tenant is EU-based and biomethane certification data is subject to EU
+residency expectations — so the <em>default</em> deployment for this vertical is the more expensive one.
+Open decision #4.</p>
+<hr />
+<h2 id="worked-example">Worked example</h2>
+<p><strong>Mid-size biomethane operator.</strong> One company, three branches, 12 users, 40 GB, 5,000 calculations,
+2,000 emails, 300 SMS, 20 disclosure packs, one extra vertical. PRO, shared, EU region.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Basis</th>
+<th>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRO platform fee</td>
+<td></td>
+<td>$499.00</td>
+</tr>
+<tr>
+<td>Additional vertical</td>
+<td>1 × $250</td>
+<td>$250.00</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>40 GB, within 250 GB allowance</td>
+<td>$0.00</td>
+</tr>
+<tr>
+<td>Calculations</td>
+<td>5,000, within 50,000 allowance</td>
+<td>$0.00</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>2,000 × $0.0008</td>
+<td>$1.60</td>
+</tr>
+<tr>
+<td>SMS</td>
+<td>300 × $0.0900</td>
+<td>$27.00</td>
+</tr>
+<tr>
+<td>Disclosure packs</td>
+<td>20 × $0.1000</td>
+<td>$2.00</td>
+</tr>
+<tr>
+<td><em>Subtotal</em></td>
+<td></td>
+<td><em>$779.60</em></td>
+</tr>
+<tr>
+<td>Wallet credits applied</td>
+<td>2,000 included = $20.00</td>
+<td>−$20.00</td>
+</tr>
+<tr>
+<td>EU residency premium</td>
+<td>+30% on platform + vertical</td>
+<td>$224.70</td>
+</tr>
+<tr>
+<td><strong>Monthly total</strong></td>
+<td><em>(before tax)</em></td>
+<td><strong>$984.30</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Estimated cost to serve: shared allocation ~$20, storage ~$1, notifications ~$16, compute ~$5,
+plus baseline share ~$65 ≈ <strong>$107</strong>. Gross margin ≈ <strong>89%</strong>.</p>
+<p>That is healthy and it is <em>not</em> the number to plan on. It excludes support, sales, onboarding and
+customer success — the costs that actually scale with customer count. The margin exists to cover
+them; see below.</p>
+<hr />
+<h2 id="what-the-margins-have-to-cover">What the margins have to cover</h2>
+<table>
+<thead>
+<tr>
+<th>Overhead</th>
+<th>Allocation</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engineering &amp; maintenance</td>
+<td>Across all tenants</td>
+<td>Covered by the 25–45% margin</td>
+</tr>
+<tr>
+<td>Sales &amp; marketing</td>
+<td>Across all tenants</td>
+<td>Covered by margin</td>
+</tr>
+<tr>
+<td>Support (tiered)</td>
+<td>Per plan</td>
+<td>FREE community · PRO business hours · ENTERPRISE SLA</td>
+</tr>
+<tr>
+<td>Onboarding &amp; data migration</td>
+<td>Per customer</td>
+<td><strong>One-off fee, $2,500–15,000. Do not subsidise from subscription</strong></td>
+</tr>
+<tr>
+<td>Compliance &amp; domain expertise</td>
+<td>Across all tenants</td>
+<td>The differentiator; fund it explicitly</td>
+</tr>
+<tr>
+<td>Dedicated customer team</td>
+<td>Per customer</td>
+<td><strong>$10,000–25,000 / month retainer</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Never offer a 99.9%+ SLA below ENTERPRISE.</strong> An SLA credit on a $499 account can exceed the
+account's annual margin, and multi-region failover to support it costs more than the tier earns.</p>
+<hr />
+<h2 id="on-premise-self-hosted">On-premise / self-hosted</h2>
+<p>Governments and large industrials mandate it. The economics invert: the customer absorbs
+infrastructure, so the price is licence-based.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Implementation</td>
+<td>$25,000–75,000 — deployment, integration, training</td>
+</tr>
+<tr>
+<td>Annual licence</td>
+<td>$100,000–500,000+ by user volume and verticals</td>
+</tr>
+<tr>
+<td>Support &amp; maintenance</td>
+<td>20% of licence per year</td>
+</tr>
+<tr>
+<td><strong>Caveat</strong></td>
+<td>No managed emission-factor API. Ship a versioned factor database and an update mechanism — and price the updates</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="open-decisions">Open decisions</h2>
+<p>Blocking, and dated in <a href="../Deliverables/#open-decisions">Deliverables.md</a>.</p>
+<ol>
+<li><strong>Margin target</strong> — 25 / 35 / 45%. Every published price above assumes 45% unless stated. <em>(7 Sep)</em></li>
+<li><strong>Payment gateway</strong> — shapes <code>C8</code> and the fee model. <em>(7 Sep)</em></li>
+<li><strong>Shared-vs-dedicated threshold</strong> — which tier earns dedicated. <em>(10 Sep)</em></li>
+<li><strong>Data residency default</strong> — EU-only for all, or per tenant. ±30%. <em>(10 Sep)</em></li>
+<li><strong>FREE tier at all?</strong> — it costs ~$8–25/month per tenant with no revenue. Justifiable as a funnel,
+   not as charity. Cap it hard or drop it.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

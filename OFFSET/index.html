@@ -1,0 +1,1380 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Carbon Atlas platform">
+      
+      
+      
+      
+        <link rel="prev" href="../INTEGRATION_STANDARD/">
+      
+      
+        <link rel="next" href="../RULES-AND-WORKFLOWS/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Offset - Carbon Atlas Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#offset-reduction-planning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Carbon Atlas Documentation" class="md-header__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Carbon Atlas Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Offset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Carbon Atlas Documentation" class="md-nav__button md-logo" aria-label="Carbon Atlas Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Carbon Atlas Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COMPETITORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Competitors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONFIGURABILITY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../COST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EU-BIOMETHANE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU Biomethane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDENTITY-AND-SCOPE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identity and Scope
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../INTEGRATION_STANDARD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offset
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Offset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#offset-is-the-wrong-word-for-most-of-what-this-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Offset" is the wrong word for most of what this does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prioritisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioritisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-plan-differs-by-branch-and-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the plan differs by branch and location
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measure-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measure libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measure libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biomethane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biomethane
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustainable-fuels-h2-ptx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustainable fuels (H₂ / PtX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industrial-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Industrial heat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CCUS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-wastewater" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water &amp; wastewater
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waste-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waste management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-vertical-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-vertical measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-credit-half" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The credit half
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RULES-AND-WORKFLOWS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rules and Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#offset-is-the-wrong-word-for-most-of-what-this-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Offset" is the wrong word for most of what this does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prioritisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioritisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-plan-differs-by-branch-and-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the plan differs by branch and location
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measure-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measure libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measure libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biomethane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Biomethane
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustainable-fuels-h2-ptx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustainable fuels (H₂ / PtX)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#industrial-heat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Industrial heat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ccus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CCUS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#water-wastewater" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Water &amp; wastewater
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waste-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Waste management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-vertical-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-vertical measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-credit-half" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The credit half
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pitfalls
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="offset-reduction-planning">Offset &amp; Reduction Planning</h1>
+<p>How the platform turns a measured footprint into a ranked, costed plan of action — and why the plan
+differs at every branch.</p>
+<p>← <a href="../Deliverables/">Deliverables.md</a> · see also <a href="../EU-BIOMETHANE/">EU-BIOMETHANE.md</a> · <a href="../RULES-AND-WORKFLOWS/">RULES-AND-WORKFLOWS.md</a></p>
+<hr />
+<h2 id="offset-is-the-wrong-word-for-most-of-what-this-does">"Offset" is the wrong word for most of what this does</h2>
+<p>The engine is named for offsets and spends most of its time on <strong>reductions</strong>. The distinction is
+not pedantry — it is the difference between a defensible disclosure and a rejected one.</p>
+<pre><code>Reduction    the emission does not happen        →  lowers gross Scope 1/2/3
+Removal      CO₂ is taken out and stored         →  disclosed separately, never netted
+Credit       somebody else reduced, you paid     →  disclosed separately, never netted
+</code></pre>
+<p>Under <strong>ESRS E1</strong> all three are reported, and only the first changes the gross figure. A tool that
+lets a customer subtract purchased credits from gross emissions is helping them file an incorrect
+regulatory disclosure.</p>
+<p>So the plan is ordered: <strong>reduce first, then remove, then credit the residual</strong> — and the UI says so,
+because the ordering is the professional advice embedded in the product, not a default somebody can
+reverse without noticing.</p>
+<hr />
+<h2 id="prioritisation">Prioritisation</h2>
+<pre><code>Priority score  =  (annual abatement tCO₂e  ×  ROI)  /  implementation complexity
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Source</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Annual abatement</strong></td>
+<td>Measure library × site baseline</td>
+<td>Where the emissions actually are, not where they are easiest to find</td>
+</tr>
+<tr>
+<td><strong>ROI</strong></td>
+<td><code>(annual saving − annual cost) / capex</code>, over the measure's life</td>
+<td>Negative-cost measures exist and should rank top</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>1–5: permits, downtime, integration, supply lead time</td>
+<td>The term that stops the ranking being a spreadsheet of good intentions</td>
+</tr>
+</tbody>
+</table>
+<p>Grouped into a roadmap the customer can act on:</p>
+<table>
+<thead>
+<tr>
+<th>Horizon</th>
+<th>Window</th>
+<th>Typical</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quick wins</strong></td>
+<td>0–6 months</td>
+<td>Controls tuning, leak repair, tariff and contract changes, metering</td>
+</tr>
+<tr>
+<td><strong>Medium term</strong></td>
+<td>6–18 months</td>
+<td>Heat recovery, motor and drive replacement, PPA, process optimisation</td>
+</tr>
+<tr>
+<td><strong>Long term</strong></td>
+<td>18–36 months</td>
+<td>Fuel switching, electrification, capture, major plant</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule-based for the MVP</strong> (<code>O2</code>), deliberately. AI ranking needs outcome data — which measures were
+actually implemented and what they actually saved — and that does not exist until pilots have run
+for a year. Deferred as <code>X4</code>. Shipping an AI ranking with no outcome data is a confident guess
+wearing a lab coat.</p>
+<hr />
+<h2 id="why-the-plan-differs-by-branch-and-location">Why the plan differs by branch and location</h2>
+<p>This is the requirement — <em>"branches/locations would have different rules"</em> — and there are five
+independent reasons, each of which changes the answer for the same measure.</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Effect</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grid emission factor</strong></td>
+<td>Decides whether electrification helps or hurts</td>
+<td>A heat pump in France (low-carbon grid) abates far more than the same unit on a coal-heavy grid, where it can <em>increase</em> emissions</td>
+</tr>
+<tr>
+<td><strong>Energy prices and tariffs</strong></td>
+<td>Drives ROI</td>
+<td>The same measure can pay back in three years at one site and eleven at another</td>
+</tr>
+<tr>
+<td><strong>Incentives and subsidies</strong></td>
+<td>Change capex</td>
+<td>National and regional schemes differ, have deadlines, and are often the deciding factor</td>
+</tr>
+<tr>
+<td><strong>Permits and consents</strong></td>
+<td>Change complexity, sometimes to "impossible"</td>
+<td>An urban site may be unable to site a digester regardless of economics</td>
+</tr>
+<tr>
+<td><strong>Physical constraints</strong></td>
+<td>Gate feasibility</td>
+<td>Grid connection capacity, land, roof loading, heat sink availability</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consequence for the model:</strong> a measure's abatement, cost and complexity are <strong>not properties of
+the measure</strong>. They are properties of <em>(measure × site)</em>. The library holds the shape and the
+defaults; the site holds the answer.</p>
+<pre><code>MeasureDefinition        vertical, description, mechanism, defaults          ← platform, scoped
+SiteMeasureAssessment    abatement, capex, opex, complexity, feasibility     ← per site
+</code></pre>
+<p>Getting this backwards — one global abatement figure per measure — produces a plan that is confidently
+wrong at every site except the one it was calibrated on, and the customer discovers it after
+committing capital.</p>
+<hr />
+<h2 id="measure-libraries">Measure libraries</h2>
+<p>Platform-owned defaults in the <code>GLOBAL</code> scope so a tenant is useful on day one; tenants and branches
+narrow and override. Same pattern as the UDF static-field catalogue.</p>
+<h3 id="biomethane">Biomethane</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Mechanism</th>
+<th>Typical horizon</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Methane slip reduction</td>
+<td>Upgrading maintenance, membrane replacement</td>
+<td>Quick win</td>
+<td>Often the highest-ROI item, and it <em>also</em> improves <code>ep</code> in the intensity chain — abatement and certification value together</td>
+</tr>
+<tr>
+<td>Digester heat recovery</td>
+<td>CHP or upgrading waste heat to digester</td>
+<td>Medium</td>
+<td>Reduces parasitic load</td>
+</tr>
+<tr>
+<td>Feedstock mix shift</td>
+<td>More Annex IX A, less crop</td>
+<td>Medium</td>
+<td>Changes <code>eec</code> <strong>and</strong> double-counting eligibility. Cross-check <code>R-FEED-02</code></td>
+</tr>
+<tr>
+<td>Digestate valorisation</td>
+<td>Nutrient recovery instead of disposal</td>
+<td>Medium</td>
+<td>Revenue as well as abatement</td>
+</tr>
+<tr>
+<td>Grid injection vs virtual pipeline</td>
+<td>Remove trucking</td>
+<td>Long</td>
+<td>Large <code>etd</code> reduction; capex and consent heavy</td>
+</tr>
+<tr>
+<td>CO₂ capture on the upgrader</td>
+<td>Capture the separated stream</td>
+<td>Long</td>
+<td><code>eccs</code>/<code>eccr</code>. <strong>Overlaps CCUS — claim once</strong></td>
+</tr>
+<tr>
+<td>Electrify site loads on a clean grid</td>
+<td>Replace on-site fossil</td>
+<td>Medium</td>
+<td>Grid-factor dependent; can be negative on a dirty grid</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sustainable-fuels-h2-ptx">Sustainable fuels (H₂ / PtX)</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Mechanism</th>
+<th>Horizon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hourly PPA matching</td>
+<td>Align production to renewable availability</td>
+<td>Medium — also an RFNBO compliance requirement</td>
+</tr>
+<tr>
+<td>Electrolyser efficiency</td>
+<td>Stack replacement, operating-point tuning</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Waste heat recovery from electrolysis</td>
+<td>Feed a district or process heat sink</td>
+<td>Long</td>
+</tr>
+</tbody>
+</table>
+<h3 id="industrial-heat">Industrial heat</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Mechanism</th>
+<th>Horizon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controls and setpoint optimisation</td>
+<td>No capex</td>
+<td><strong>Quick win — usually top of the list</strong></td>
+</tr>
+<tr>
+<td>Steam trap and insulation programme</td>
+<td>Maintenance</td>
+<td>Quick win</td>
+</tr>
+<tr>
+<td>High-temperature heat pump</td>
+<td>Replace fossil boiler, 80–160 °C</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Thermal energy storage</td>
+<td>Shift load to cheap/clean hours</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Solar thermal / CSP-LPT</td>
+<td>Process heat</td>
+<td>Long</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ccus">CCUS</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Mechanism</th>
+<th>Horizon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Heat-integrated capture design</td>
+<td>Cut the capture energy penalty</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Utilisation offtake</td>
+<td>Replace fossil CO₂ supply</td>
+<td>Medium — <strong>check permanence; utilisation that re-releases is not storage</strong></td>
+</tr>
+<tr>
+<td>Geological storage</td>
+<td>Permanent</td>
+<td>Long</td>
+</tr>
+</tbody>
+</table>
+<h3 id="water-wastewater">Water &amp; wastewater</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Mechanism</th>
+<th>Horizon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aeration control</td>
+<td>The dominant electrical load at most plants</td>
+<td>Quick win</td>
+</tr>
+<tr>
+<td>Sludge to anaerobic digestion</td>
+<td>Energy recovery</td>
+<td>Medium — <strong>feeds the biomethane vertical</strong></td>
+</tr>
+<tr>
+<td>Nutrient recovery</td>
+<td>Struvite and similar</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Water reuse</td>
+<td>Cut abstraction and treatment</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="waste-management">Waste management</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Mechanism</th>
+<th>Horizon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sorting-line optimisation</td>
+<td>Higher recovery, less residue</td>
+<td>Quick win</td>
+</tr>
+<tr>
+<td>RDF valorisation</td>
+<td>Displace fossil fuel in cement or similar</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Pyrolysis / gasification</td>
+<td>Divert from landfill</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>Sensorised logistics</td>
+<td>Route and fill optimisation</td>
+<td>Quick win</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cross-vertical-measures">Cross-vertical measures</h2>
+<p>The most valuable ones cross boundaries, and they are also where double counting happens.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Verticals</th>
+<th>Watch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CO₂ capture on a biogas upgrader</td>
+<td>Biomethane + CCUS</td>
+<td>One physical tonne, two possible claims. <code>R-DC-01</code> must see both</td>
+</tr>
+<tr>
+<td>Sludge digestion at a wastewater plant</td>
+<td>Water + Biomethane</td>
+<td>Produced gas may also be certified — one volume, one claim</td>
+</tr>
+<tr>
+<td>RDF into cement</td>
+<td>Waste + Industrial heat</td>
+<td>Abatement belongs to one party; contract decides which</td>
+</tr>
+<tr>
+<td>Waste heat to a district network</td>
+<td>Heat + any process</td>
+<td>Both sides may claim; the register decides</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A single claim register is the only workable answer</strong>, and it must be vertical-agnostic from the
+start — see the gap flagged in <a href="../RULES-AND-WORKFLOWS/">RULES-AND-WORKFLOWS.md</a>.</p>
+<hr />
+<h2 id="the-credit-half">The credit half</h2>
+<p>For the residual that reduction and removal cannot reach.</p>
+<p>Recommendations, never automatic purchases. The system:</p>
+<ul>
+<li>ranks credit types by <strong>permanence, additionality, verification standard and price</strong>;</li>
+<li>records the standard (Gold Standard, Verra, Article 6, national scheme) against the claim;</li>
+<li>registers every credit in the <strong>claim register</strong> so it cannot also be counted elsewhere;</li>
+<li>keeps credits <strong>out of the gross figure</strong>, always — <code>R-CSRD-01</code> enforces it at write time.</li>
+</ul>
+<p>The platform is not a credit marketplace and should not become one. It records what a customer holds
+and ensures it is disclosed correctly. Brokering introduces a conflict of interest into a tool whose
+value is being trusted about numbers.</p>
+<hr />
+<h2 id="model">Model</h2>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Holds</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MeasureDefinition</code></td>
+<td>Vertical, mechanism, description, default abatement basis</td>
+<td>Platform / tenant</td>
+</tr>
+<tr>
+<td><code>SiteMeasureAssessment</code></td>
+<td>Abatement, capex, opex, complexity, feasibility, incentives</td>
+<td><strong>Per site</strong></td>
+</tr>
+<tr>
+<td><code>OffsetPlan</code></td>
+<td>A ranked set for a scope and period</td>
+<td>Per scope</td>
+</tr>
+<tr>
+<td><code>PlanItem</code></td>
+<td>Measure, horizon, score, status, owner, target date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>LocationFactor</code></td>
+<td>Grid factor, energy price, incentive scheme, permit regime</td>
+<td><strong>Per branch/location</strong></td>
+</tr>
+<tr>
+<td><code>CreditHolding</code></td>
+<td>Type, standard, vintage, quantity, retirement state</td>
+<td>Registers into <code>Claim</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>LocationFactor</code> is the entity that makes the per-branch requirement real. Without it, location
+differences live in a consultant's spreadsheet and the plan is generic.</p>
+<hr />
+<h2 id="pitfalls">Pitfalls</h2>
+<ul>
+<li><strong>Never net credits against gross.</strong> <code>R-CSRD-01</code>. This is the one that makes a disclosure wrong.</li>
+<li><strong>Electrification is not always abatement.</strong> On a carbon-intensive grid a heat pump can raise
+  emissions. The grid factor must be per location and current, and the engine must be able to
+  return a <em>negative</em> abatement rather than clamping it to zero.</li>
+<li><strong>Do not rank by abatement alone.</strong> The largest measure is usually the one that never gets funded.
+  Complexity is in the formula for that reason.</li>
+<li><strong>Cross-vertical measures need one claim.</strong> Capture on an upgrader is the worked example.</li>
+<li><strong>A plan is a snapshot, not a live view.</strong> It is presented to a board and funded against. Version
+  it, date it, and keep what was recommended and on what basis — the same reasoning as the
+  calculation audit snapshot (<code>E4</code>).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
